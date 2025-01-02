@@ -10,3 +10,23 @@ body {
     color-scheme: dark;
   }
 } */
+
+.text_colors {
+  color: black;
+}
+
+.bg_colors {
+  background-color: white;
+}
+
+.nav_colors {
+}
+.nav_activ_text_colors {
+  color: green;
+}
+.nav_activ_bg_colors {
+  background-color: rgba(59, 107, 59, 0.227);
+}
+.nav_activ_left_border_colors {
+  border-left: 2px solid green;
+}

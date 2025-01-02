@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../../../public/logo1.png";
 import user from "../../../public/man.png";
 import { IoNotificationsOutline } from "react-icons/io5";
+import AdminLeftNavber from "../../Navber/AdminLeftNavber/AdminLeftNavber";
 
 const Admin = () => {
   return (
@@ -12,6 +13,10 @@ const Admin = () => {
         <div className="flex items-center justify-center mt-[20px]">
           <img className="w-[100px] h-[100px]" src={logo} alt="website logo" />
         </div>
+        {/* =====> Navber <===== */}
+        <nav className="mt-[20px] px-[10px]">
+          <AdminLeftNavber />
+        </nav>
       </div>
       {/* ====> Right Contect  <==== */}
       <div className="w-full">
