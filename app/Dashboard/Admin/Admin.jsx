@@ -1,9 +1,35 @@
 import React from "react";
+import logo from "../../../public/logo1.png";
+import user from "../../../public/man.png";
+import { IoNotificationsOutline } from "react-icons/io5";
 
 const Admin = () => {
   return (
-    <div>
-      <h2>Welcome to admi deshboard </h2>
+    <div className="flex max-w-[1280px] mx-auto bg-gray-100">
+      {/* ====> Lift sidber  <====5*/}
+      <div className="w-[250px] bg-white text-white min-h-screen rounded-r-[20px] ">
+        {/* ====> Logo div <==== */}
+        <div className="flex items-center justify-center mt-[20px]">
+          <img className="w-[100px] h-[100px]" src={logo} alt="website logo" />
+        </div>
+      </div>
+      {/* ====> Right Contect  <==== */}
+      <div className="w-full">
+        {/*  top part */}
+        <div className=" bg-white m-[20px] mt-[10px] px-[30px] py-[8px] flex items-center justify-between rounded-[20px]">
+          {/* leeft site  */}
+          <div>
+            <h2 className="text-[25px] font-bold">Welcome to Admin</h2>
+          </div>
+          {/* Right site  */}
+          <div className="flex items-center justify-center gap-[20px]">
+            <IoNotificationsOutline className="text-[20px]" />
+            <div className="w-[40px] h-[40px]">
+              <img className="h-full w-full" src={user} alt="user image" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
