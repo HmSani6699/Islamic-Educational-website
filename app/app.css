@@ -22,10 +22,10 @@ body {
 .nav_colors {
 }
 .nav_activ_text_colors {
-  color: green;
+  color: #008000;
 }
 .nav_activ_bg_colors {
-  background-color: rgba(59, 107, 59, 0.227);
+  background-color: #3b6b3b3a;
 }
 .nav_activ_left_border_colors {
   border-left: 2px solid green;

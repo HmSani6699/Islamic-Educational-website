@@ -1,10 +1,10 @@
 import { type RouteConfig, index, prefix, route } from "@react-router/dev/routes";
 
 export default [index("./Pages/Home/Home.jsx"),
-    //======>  Admin layout  <=====//
-    ...prefix("admin", [
-        // index("./Login/AdminLogin/AdminLogin.jsx")
-        index("./Dashboard/Admin/Admin.jsx"),
-      
+   
+
+    route("admin","./Dashboard/Admin/Admin.jsx", [
+        index("./Dashboard/Admin/AdminDashboard.jsx"),
+         route("admission", "./Dashboard/Admin/AdmissionList/AdmissionList.jsx")
     ])
 ] satisfies RouteConfig;

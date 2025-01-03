@@ -3,6 +3,8 @@ import logo from "../../../public/logo1.png";
 import user from "../../../public/man.png";
 import { IoNotificationsOutline } from "react-icons/io5";
 import AdminLeftNavber from "../../Navber/AdminLeftNavber/AdminLeftNavber";
+import { FiLogOut } from "react-icons/fi";
+import { Outlet } from "react-router";
 
 const Admin = () => {
   return (
@@ -14,9 +16,14 @@ const Admin = () => {
           <img className="w-[100px] h-[100px]" src={logo} alt="website logo" />
         </div>
         {/* =====> Navber <===== */}
-        <nav className="mt-[20px] px-[10px]">
+        <nav className="mt-[20px] px-[10px] ">
           <AdminLeftNavber />
+          {/* ===> Log out <==== */}
         </nav>
+        {/* <div className="absolute bottom-0 bg-red-400  flex items-end  rounded-[20px] border border-red-600">
+          <h2>Logout</h2>
+          <FiLogOut />
+        </div> */}
       </div>
       {/* ====> Right Contect  <==== */}
       <div className="w-full">
@@ -33,6 +40,10 @@ const Admin = () => {
               <img className="h-full w-full" src={user} alt="user image" />
             </div>
           </div>
+        </div>
+        {/* ======> MAin content  <===== */}
+        <div>
+          <Outlet />
         </div>
       </div>
     </div>
