@@ -26,9 +26,9 @@ const Admin = () => {
         </div> */}
       </div>
       {/* ====> Right Contect  <==== */}
-      <div className="w-full">
+      <div className="w-full m-[20px]">
         {/*  top part */}
-        <div className=" bg-white m-[20px] mt-[10px] px-[30px] py-[8px] flex items-center justify-between rounded-[20px]">
+        <div className=" bg-white  mt-[10px] px-[30px] py-[8px] flex items-center justify-between rounded-[20px]">
           {/* leeft site  */}
           <div>
             <h2 className="text-[25px] font-bold">Welcome to Admin</h2>

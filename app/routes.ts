@@ -5,6 +5,6 @@ export default [index("./Pages/Home/Home.jsx"),
 
     route("admin","./Dashboard/Admin/Admin.jsx", [
         index("./Dashboard/Admin/AdminDashboard.jsx"),
-         route("admission", "./Dashboard/Admin/AdmissionList/AdmissionList.jsx")
+         route("admission_list", "./Dashboard/Admin/AdmissionList/AdmissionList.jsx")
     ])
 ] satisfies RouteConfig;
