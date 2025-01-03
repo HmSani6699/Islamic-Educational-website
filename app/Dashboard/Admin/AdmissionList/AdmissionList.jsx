@@ -4,6 +4,7 @@ import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
 import { LuView } from "react-icons/lu";
 import { MdOutlineDeleteSweep } from "react-icons/md";
+import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
 
 const AdmissionList = () => {
   return (
@@ -18,6 +19,10 @@ const AdmissionList = () => {
       </div>
       {/* =====> Midle part <==== */}
       <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-10">
+        {/* =====> Search Div  <====== */}
+        <CustomSearchForm />
+
+        {/* =====> Admission list table <====== */}
         <table
           className="w-full mt-5 text-left border-collapse w-overflow-x-auto table-auto "
           cellSpacing="0"
