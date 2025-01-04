@@ -79,7 +79,7 @@ const Address = ({ setCurrentPage }) => {
           Back
         </button>
         <button
-          onClick={() => setCurrentPage("address")}
+          onClick={() => setCurrentPage("learningStatus")}
           className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px]"
         >
           Next
