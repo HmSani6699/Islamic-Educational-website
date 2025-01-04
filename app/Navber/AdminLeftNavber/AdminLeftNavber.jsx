@@ -11,7 +11,7 @@ const AdminLeftNavber = () => {
         <MdOutlineDashboard className="text-[20px]" />
       </NavlLink>
       <NavlLink
-        url={"/admin/admission_list"}
+        url={"/admin/admission"}
         title={"Admission List"}
         children_true={false}
       >

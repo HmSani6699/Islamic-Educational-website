@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
@@ -9,14 +9,6 @@ import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchFo
 const AdmissionList = () => {
   return (
     <div>
-      {/* ======> Top part <==== */}
-      <div className="flex items-center justify-between  px-[20px] py-[10px] bg-white mt-[40px] rounded-t-[20px] border-t-[2px] border-[#008000]">
-        <h2 className="text-[20px] font-semibold">All Admission (20)</h2>
-        <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[10px] rounded-[8px]">
-          <FaPlus />
-          New Admission
-        </button>
-      </div>
       {/* =====> Midle part <==== */}
       <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-10">
         {/* =====> Search Div  <====== */}
