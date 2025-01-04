@@ -8,7 +8,7 @@ import { Outlet } from "react-router";
 
 const Admin = () => {
   return (
-    <div className="flex max-w-[1280px] mx-auto bg-gray-100">
+    <div className="flex max-w-[1400px] mx-auto bg-gray-100">
       {/* ====> Lift sidber  <====5*/}
       <div className="w-[250px] bg-white text-white min-h-screen rounded-r-[20px] ">
         {/* ====> Logo div <==== */}
