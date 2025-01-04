@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import InputField from "../../InputField/InputField";
 import { GrLinkNext } from "react-icons/gr";
 
-const About = () => {
+const About = ({ setCurrentPage }) => {
   const [studentName, setStudentName] = useState();
   return (
-    <div>
+    <div className="px-[20px] py-[10px] bg-white mt-[20px] mb-[50px] ">
       <h2 className="text-[20px] font-semibold text-center my-[20px]">
         ছাত্র সম্পর্কে
       </h2>
@@ -137,6 +137,21 @@ const About = () => {
             setValue={setStudentName}
           />
         </div>
+        {/* === অভিভাবকের  info  === */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] lg:mb-[20px]">
+          <InputField
+            title="অভিভাবকের নাম"
+            type={"text"}
+            placeholder={"আপনার ছাত্রের অভিভাবকের নাম লিখুন"}
+            setValue={setStudentName}
+          />
+          <InputField
+            title="সম্পর্ক"
+            type={"text"}
+            placeholder={"সম্পর্ক"}
+            setValue={setStudentName}
+          />
+        </div>
         {/* === Phone number  === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] lg:mb-[20px]">
           <InputField
@@ -155,7 +170,10 @@ const About = () => {
         </div>
         {/* ==== Submit button ==== */}
         <div className="flex justify-end mt-[30px] mb-[15px]">
-          <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[10px]">
+          <button
+            onClick={() => setCurrentPage("address")}
+            className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px]"
+          >
             Next
             <GrLinkNext />
           </button>
