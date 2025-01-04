@@ -79,7 +79,7 @@ const LearningStatus = ({ setCurrentPage }) => {
           Back
         </button>
         <button
-          onClick={() => setCurrentPage("learningStatus")}
+          onClick={() => setCurrentPage("feeDetails")}
           className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px]"
         >
           Next

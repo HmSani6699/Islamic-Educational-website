@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import About from "./About/About";
 import Address from "./Address/Address";
 import LearningStatus from "./LearningStatus/LearningStatus";
+import FeeDetails from "./FeeDetails/FeeDetails";
 
 const AdmissionForm = () => {
   const [currentPage, setCurrentPage] = useState("about");
@@ -45,6 +46,8 @@ const AdmissionForm = () => {
         <Address setCurrentPage={setCurrentPage} />
       ) : currentPage === "learningStatus" ? (
         <LearningStatus setCurrentPage={setCurrentPage} />
+      ) : currentPage === "feeDetails" ? (
+        <FeeDetails setCurrentPage={setCurrentPage} />
       ) : (
         <h2>page nai</h2>
       )}
