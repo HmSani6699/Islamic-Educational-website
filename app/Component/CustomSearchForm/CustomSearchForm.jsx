@@ -10,7 +10,7 @@ const CustomSearchForm = ({
   classAdd,
 }) => {
   return (
-    <div>
+    <div className="w-full">
       <form
         onSubmit={handleSearch}
         className={`flex ${position ? position : "justify-end"}`}
