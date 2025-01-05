@@ -6,9 +6,7 @@ const About = ({ setCurrentPage }) => {
   const [studentName, setStudentName] = useState();
   return (
     <div className="px-[20px] py-[10px] bg-white mt-[20px] mb-[50px] ">
-      <h2 className="text-[20px] font-semibold text-center my-[20px]">
-        ছাত্র সম্পর্কে
-      </h2>
+      <h2 className="text-[20px] font-semibold my-[20px]">ছাত্র সম্পর্কে</h2>
 
       {/* ====> About form <==== */}
       <div className="mt-[50px]">

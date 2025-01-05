@@ -6,8 +6,9 @@ import SelectInputField from "../../SelectInputField/SelectInputField";
 const LearningStatus = ({ setCurrentPage }) => {
   return (
     <div className="px-[20px] py-[10px] bg-white mt-[20px] mb-[50px] ">
+      <h2 className="text-[20px] font-semibold my-[20px]">শেখার অবস্থা</h2>
       {/* =====> Form div  <===== */}
-      <div className="mt-[30px]">
+      <div className="mt-[40px]">
         {/* === father info  === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[25px] lg:mb-[20px]">
           <SelectInputField
