@@ -70,7 +70,6 @@ const AdminDashboard = () => {
           alt=""
         />
       </div> */}
-
       <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-[20px]">
         {/* =====> Search Div  <====== */}
         <div className="flex items-center justify-between">
