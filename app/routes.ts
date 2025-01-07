@@ -1,11 +1,18 @@
-import { type RouteConfig, index, prefix, route } from "@react-router/dev/routes";
+import { type RouteConfig, index, layout, route } from "@react-router/dev/routes";
 
-export default [index("./Pages/Home/Home.jsx"),
-   
+export default [
+  index("./Pages/Home/Home.jsx"),
 
-    route("admin","./Dashboard/Admin/Admin.jsx", [
-        index("./Dashboard/Admin/AdminDashboard.jsx"),
-         route("admission", "./Dashboard/Admin/Admission/Amission.jsx"),
-         route("admission_form", "./Component/AdmissionForm/AdmissionForm.jsx"),
-    ])
+  // =====> Admin routes <======//
+  route("admin", "./Dashboard/Admin/Admin.jsx", [
+    index("./Dashboard/Admin/AdminDashboard.jsx"),
+    route("admission", "./Dashboard/Admin/Admission/Amission.jsx"),
+    route("admission_form", "./Component/AdmissionForm/AdmissionForm.jsx"),
+  ]),
+
+    // =====> Teacher routes  <======//
+    route("teacher", "./Dashboard/Teacher/TeacherLayout.jsx", [
+    index("./Dashboard/Teacher/TeacherDashboard.jsx"),
+  ]),
+  
 ] satisfies RouteConfig;
