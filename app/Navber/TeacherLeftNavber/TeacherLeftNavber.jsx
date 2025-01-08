@@ -53,7 +53,7 @@ const TeacherLeftNavber = () => {
         >
           {/* Nav Links with Correct Icons */}
           <NavlLink
-            url={"/class-one/arabic"}
+            url={"/teacher/student_attendance"}
             title={"Arabic"}
             children_true={true}
           >

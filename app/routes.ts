@@ -13,6 +13,7 @@ export default [
     // =====> Teacher routes  <======//
     route("teacher", "./Dashboard/Teacher/TeacherLayout.jsx", [
     index("./Dashboard/Teacher/TeacherDashboard.jsx"),
+    route("student_attendance","./Component/StudentAttendance/StudentAttenddance.jsx"),
   ]),
   
 ] satisfies RouteConfig;
