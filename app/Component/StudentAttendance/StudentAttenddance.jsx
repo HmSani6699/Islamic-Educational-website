@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomSearchForm from "../CustomSearchForm/CustomSearchForm";
+import Attendance from "./Attendance/Attendance";
+import Present from "./Present/Present";
+import Absent from "./Absent/Absent";
+import AttendanceSummary from "./AttendanceSummary/AttendanceSummary";
 
 const StudentAttenddance = () => {
+  const [currentPage, setCurrentPage] = useState("attendance");
+
   return (
     <div>
       {/* =====> Banner <===== */}
@@ -21,20 +27,45 @@ const StudentAttenddance = () => {
       {/* =======> Midle content <====== */}
       <div className="mt-[80px]">
         <div className="flex items-center gap-[15px]">
-          <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]">
+          <button
+            onClick={() => setCurrentPage("attendance")}
+            className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]"
+          >
             Student Attendance
           </button>
-          <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]">
+          <button
+            onClick={() => setCurrentPage("present")}
+            className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]"
+          >
             Present Count
           </button>
-          <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]">
+          <button
+            onClick={() => setCurrentPage("absent")}
+            className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]"
+          >
             Absent Count
           </button>
-          <button className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]">
+          <button
+            onClick={() => setCurrentPage("summary")}
+            className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px] mt-[30px]"
+          >
             Attendance Summary
           </button>
         </div>
       </div>
+
+      {/* ======> Tab content <===== */}
+      {currentPage === "attendance" ? (
+        <Attendance />
+      ) : currentPage === "present" ? (
+        <Present />
+      ) : currentPage === "absent" ? (
+        <Absent />
+      ) : currentPage === "summary" ? (
+        <AttendanceSummary />
+      ) : (
+        ""
+      )}
     </div>
   );
 };
