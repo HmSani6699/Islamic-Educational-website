@@ -13,7 +13,7 @@ const Attendance = () => {
         <CustomSearchForm />
       </div>
 
-      <div>
+      <div className="mt-[50px]">
         <table
           className="w-full mt-5 text-left border-collapse w-overflow-x-auto table-auto "
           cellSpacing="0"
