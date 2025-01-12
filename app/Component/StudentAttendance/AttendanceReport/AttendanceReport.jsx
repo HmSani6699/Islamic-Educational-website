@@ -11,7 +11,7 @@ const AttendanceReport = ({ open, setOpen }) => {
           onClick={() => setOpen(false)}
           className="text-[25px] text-red-600 absolute right-[5px] top-[5px] cursor-pointer"
         />
-        <h2 className="text-[25px] font-semibold text-center mb-[30px]">
+        <h2 className="text-[25px] font-semibold text-center mb-[40px]">
           Attendance report
         </h2>
 

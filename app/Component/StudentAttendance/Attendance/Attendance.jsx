@@ -5,9 +5,11 @@ import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
 import user from "../../../../public/man.png";
 import AttendanceReport from "../AttendanceReport/AttendanceReport";
+import AttendanceUpdate from "../AttendanceUpdate/AttendanceUpdate";
 
 const Attendance = () => {
-  const [attendanceReport, setAttendancereport] = useState(false);
+  const [attendanceReport, setAttendanceReport] = useState(false);
+  const [attendanceUpdate, setAttendanceUpdate] = useState(false);
 
   return (
     <div className="bg-white my-[40px] p-[20px]">
@@ -89,11 +91,13 @@ const Attendance = () => {
                 <div className="flex items-center justify-center mt-[15px]">
                   <div className="flex items-center gap-[10px]">
                     <button
-                      onClick={() => setAttendancereport(!attendanceReport)}
+                      onClick={() => setAttendanceReport(!attendanceReport)}
                     >
                       <LuMessageCircleMore className="text-[20px]" />
                     </button>
-                    <button>
+                    <button
+                      onClick={() => setAttendanceUpdate(!attendanceUpdate)}
+                    >
                       <img src={update_green_icon} alt="" />
                     </button>
                     <button>
@@ -301,7 +305,13 @@ const Attendance = () => {
       {attendanceReport && (
         <AttendanceReport
           open={attendanceReport}
-          setOpen={setAttendancereport}
+          setOpen={setAttendanceReport}
+        />
+      )}
+      {attendanceUpdate && (
+        <AttendanceUpdate
+          open={attendanceUpdate}
+          setOpen={setAttendanceUpdate}
         />
       )}
     </div>
