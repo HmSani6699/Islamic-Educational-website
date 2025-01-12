@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomSearchForm from "../../CustomSearchForm/CustomSearchForm";
 import { LuMessageCircleMore, LuView } from "react-icons/lu";
 import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
 import user from "../../../../public/man.png";
+import AttendanceReport from "../AttendanceReport/AttendanceReport";
 
 const Attendance = () => {
+  const [attendanceReport, setAttendancereport] = useState(false);
+
   return (
     <div className="bg-white my-[40px] p-[20px]">
       <div className="flex items-center  justify-between">
@@ -13,7 +16,7 @@ const Attendance = () => {
         <CustomSearchForm />
       </div>
 
-      <div className="mt-[50px]">
+      <div className="mt-[50px] mb-[20px]">
         <table
           className="w-full mt-5 text-left border-collapse w-overflow-x-auto table-auto "
           cellSpacing="0"
@@ -85,7 +88,9 @@ const Attendance = () => {
               <td className="h-10 py-2 flex justify-center">
                 <div className="flex items-center justify-center mt-[15px]">
                   <div className="flex items-center gap-[10px]">
-                    <button>
+                    <button
+                      onClick={() => setAttendancereport(!attendanceReport)}
+                    >
                       <LuMessageCircleMore className="text-[20px]" />
                     </button>
                     <button>
@@ -291,6 +296,14 @@ const Attendance = () => {
           </tbody>
         </table>
       </div>
+
+      {/* ====> Attentdance report box <=== */}
+      {attendanceReport && (
+        <AttendanceReport
+          open={attendanceReport}
+          setOpen={setAttendancereport}
+        />
+      )}
     </div>
   );
 };
