@@ -5,12 +5,23 @@ import TeacherCreateUpdate from "./TeacherCreateUpdate";
 
 const Teacher = () => {
   const [currentPage, setCurrentPage] = useState("teacherList");
+  const [createTechercurrentForm, setCreateTechercurrentForm] =
+    useState("signup");
 
   return (
     <div>
       {/* ======> Top part <==== */}
-      <div className="flex items-center justify-between  px-[20px] py-[10px] bg-white mt-[40px] rounded-t-[20px] border-t-[2px] border-[#008000]">
-        <div>
+      <div
+        className={`${
+          createTechercurrentForm !== "form_success" &&
+          "bg-white border-t-[2px] border-[#008000]"
+        } flex items-center justify-between  px-[20px] py-[10px]  mt-[40px] rounded-t-[20px] `}
+      >
+        <div
+          className={`${
+            createTechercurrentForm === "form_success" ? "hidden" : "block"
+          }`}
+        >
           {currentPage === "teacherList" ? (
             <h2 className="text-[20px] font-semibold">Teacher List</h2>
           ) : (
@@ -36,7 +47,10 @@ const Teacher = () => {
       {currentPage === "teacherList" ? (
         <TeacherList />
       ) : currentPage === "teacherCreateUpdate" ? (
-        <TeacherCreateUpdate />
+        <TeacherCreateUpdate
+          currentForm={createTechercurrentForm}
+          setCurrentForm={setCreateTechercurrentForm}
+        />
       ) : null}
     </div>
   );

@@ -8,25 +8,24 @@ import TeacherPaymentProgress from "./TeacherPaymentProgress";
 import TeacherPhoto from "./TeacherPhoto";
 import FormSuccess from "../../../Component/AdmissionForm/FormSuccess/FormSuccess";
 
-const TeacherCreateUpdate = () => {
-  const [currentPage, setCurrentPage] = useState("signup");
+const TeacherCreateUpdate = ({ currentForm, setCurrentForm }) => {
   return (
     <div className="flex items-center justify-center mb-[50px]">
-      {currentPage === "signup" ? (
-        <TeaccherSignUp setPage={setCurrentPage} />
-      ) : currentPage === "generalInfo" ? (
-        <TeacherGeneralInfo setPage={setCurrentPage} />
-      ) : currentPage === "address" ? (
-        <TeacherAddress setPage={setCurrentPage} />
-      ) : currentPage === "education" ? (
-        <TeacherEducation setPage={setCurrentPage} />
-      ) : currentPage === "jobExperience" ? (
-        <TeacherJobExperience setPage={setCurrentPage} />
-      ) : currentPage === "payment" ? (
-        <TeacherPaymentProgress setPage={setCurrentPage} />
-      ) : currentPage === "photo" ? (
-        <TeacherPhoto setPage={setCurrentPage} />
-      ) : currentPage === "form_success" ? (
+      {currentForm === "signup" ? (
+        <TeaccherSignUp setPage={setCurrentForm} />
+      ) : currentForm === "generalInfo" ? (
+        <TeacherGeneralInfo setPage={setCurrentForm} />
+      ) : currentForm === "address" ? (
+        <TeacherAddress setPage={setCurrentForm} />
+      ) : currentForm === "education" ? (
+        <TeacherEducation setPage={setCurrentForm} />
+      ) : currentForm === "jobExperience" ? (
+        <TeacherJobExperience setPage={setCurrentForm} />
+      ) : currentForm === "payment" ? (
+        <TeacherPaymentProgress setPage={setCurrentForm} />
+      ) : currentForm === "photo" ? (
+        <TeacherPhoto setPage={setCurrentForm} />
+      ) : currentForm === "form_success" ? (
         <FormSuccess />
       ) : null}
     </div>
