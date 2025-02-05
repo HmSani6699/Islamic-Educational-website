@@ -17,23 +17,12 @@ const AdminLeftNavber = () => {
       >
         <LuClipboardPenLine className="text-[20px]" />
       </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Hefz"} children_true={false}>
+      <NavlLink
+        url={"/admin/teacher"}
+        title={"Teacher List"}
+        children_true={false}
+      >
         <MdOutlineDashboard className="text-[20px]" />
-      </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Najera"} children_true={false}>
-        <FaBook className="text-[20px]" />
-      </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Hefz"} children_true={false}>
-        <MdOutlineDashboard className="text-[20px]" />
-      </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Najera"} children_true={false}>
-        <FaBook className="text-[20px]" />
-      </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Hefz"} children_true={false}>
-        <MdOutlineDashboard className="text-[20px]" />
-      </NavlLink>
-      <NavlLink url={"/dashboard"} title={"Najera"} children_true={false}>
-        <FaBook className="text-[20px]" />
       </NavlLink>
     </div>
   );
