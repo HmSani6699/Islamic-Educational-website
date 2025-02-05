@@ -52,7 +52,7 @@ const TeacherJobExperience = ({ setPage }) => {
           Back
         </button>
         <button
-          onClick={() => setPage("jobExperience")}
+          onClick={() => setPage("payment")}
           className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px]"
         >
           Next

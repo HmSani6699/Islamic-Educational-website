@@ -4,6 +4,7 @@ import TeacherAddress from "./TeacherAddress";
 import TeacherGeneralInfo from "./TeacherGeneralInfo";
 import TeacherEducation from "./TeacherEducation";
 import TeacherJobExperience from "./TeacherJobExperience";
+import TeacherPaymentProgress from "./TeacherPaymentProgress";
 
 const TeacherCreateUpdate = () => {
   const [currentPage, setCurrentPage] = useState("signup");
@@ -19,6 +20,8 @@ const TeacherCreateUpdate = () => {
         <TeacherEducation setPage={setCurrentPage} />
       ) : currentPage === "jobExperience" ? (
         <TeacherJobExperience setPage={setCurrentPage} />
+      ) : currentPage === "payment" ? (
+        <TeacherPaymentProgress setPage={setCurrentPage} />
       ) : null}
     </div>
   );
