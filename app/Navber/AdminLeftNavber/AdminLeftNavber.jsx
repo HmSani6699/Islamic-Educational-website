@@ -1,7 +1,7 @@
 import React from "react";
 import NavlLink from "../../Component/NavList/NavLink/NavlLink";
 import { MdOutlineDashboard } from "react-icons/md";
-import { FaBook } from "react-icons/fa";
+import { FaBook, FaUserGraduate } from "react-icons/fa";
 import { LuClipboardPenLine } from "react-icons/lu";
 
 const AdminLeftNavber = () => {
@@ -22,7 +22,7 @@ const AdminLeftNavber = () => {
         title={"Teacher List"}
         children_true={false}
       >
-        <MdOutlineDashboard className="text-[20px]" />
+        <FaUserGraduate className="text-[20px]" />
       </NavlLink>
     </div>
   );

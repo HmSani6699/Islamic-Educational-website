@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import TeaccherSignUp from "./TeaccherSignUp";
 
 const TeacherCreateUpdate = () => {
-  return <div></div>;
+  const [currentPage, setCurrentPage] = useState("signup");
+  return (
+    <div className="flex items-center justify-center mb-[50px]">
+      {currentPage === "signup" ? <TeaccherSignUp /> : null}
+    </div>
+  );
 };
 
 export default TeacherCreateUpdate;
