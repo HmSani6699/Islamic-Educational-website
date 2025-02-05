@@ -8,11 +8,11 @@ const TeacherCreateUpdate = () => {
   return (
     <div className="flex items-center justify-center mb-[50px]">
       {currentPage === "signup" ? (
-        <TeaccherSignUp setPge={setCurrentPage} />
+        <TeaccherSignUp setPage={setCurrentPage} />
       ) : currentPage === "generalInfo" ? (
-        <TeacherGeneralInfo setPge={setCurrentPage} />
+        <TeacherGeneralInfo setPage={setCurrentPage} />
       ) : currentPage === "address" ? (
-        <TeacherAddress setPge={setCurrentPage} />
+        <TeacherAddress setPage={setCurrentPage} />
       ) : null}
     </div>
   );

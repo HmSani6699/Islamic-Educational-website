@@ -2,7 +2,7 @@ import React from "react";
 import InputField from "../../../Component/InputField/InputField";
 import { GrLinkNext } from "react-icons/gr";
 
-const TeaccherSignUp = ({ setPge }) => {
+const TeaccherSignUp = ({ setPage }) => {
   return (
     <div className="bg-white p-[20px] rounded-[10px] mt-10 w-[500px]">
       <h2 className="text-[22px]  font-semibold text-center mt-[8px]">
@@ -45,7 +45,7 @@ const TeaccherSignUp = ({ setPge }) => {
         </div>
         <div className="flex justify-end mt-[30px]">
           <button
-            onClick={() => setPge("generalInfo")}
+            onClick={() => setPage("generalInfo")}
             className="flex items-center gap-[8px] bg-[#008000]  text-white px-[20px] py-[8px] rounded-[8px]"
           >
             Next
