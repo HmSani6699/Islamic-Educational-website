@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import TeaccherSignUp from "./TeaccherSignUp";
 import TeacherAddress from "./TeacherAddress";
 import TeacherGeneralInfo from "./TeacherGeneralInfo";
+import TeacherEducation from "./TeacherEducation";
+import TeacherJobExperience from "./TeacherJobExperience";
 
 const TeacherCreateUpdate = () => {
   const [currentPage, setCurrentPage] = useState("signup");
@@ -13,6 +15,10 @@ const TeacherCreateUpdate = () => {
         <TeacherGeneralInfo setPage={setCurrentPage} />
       ) : currentPage === "address" ? (
         <TeacherAddress setPage={setCurrentPage} />
+      ) : currentPage === "education" ? (
+        <TeacherEducation setPage={setCurrentPage} />
+      ) : currentPage === "jobExperience" ? (
+        <TeacherJobExperience setPage={setCurrentPage} />
       ) : null}
     </div>
   );
