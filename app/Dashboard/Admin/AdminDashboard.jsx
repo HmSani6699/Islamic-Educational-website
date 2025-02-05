@@ -11,7 +11,7 @@ const AdminDashboard = () => {
   return (
     <div className="my-[50px]">
       <div className="flex gap-[20px]">
-        <div className="grid grid-cols-3 gap-[20px] w-[70%]">
+        <div className="grid grid-cols-3 gap-[20px] w-full mb-[50px]">
           <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
             <h2 className="text-[20px] font-semibold">শিশু শ্রেণী</h2>
             <div className=" flex items-center justify-between mt-[15px]">
@@ -55,13 +55,13 @@ const AdminDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="w-[30%] h-[280px] rounded-[10px]">
+        {/* <div className="w-[30%] h-[280px] rounded-[10px]">
           <img
             className="h-full w-full rounded-[10px]"
             src={dashboard_image}
             alt=""
           />
-        </div>
+        </div> */}
       </div>
       {/* <div className="mt-[20px] w-full rounded-[10px]">
         <img

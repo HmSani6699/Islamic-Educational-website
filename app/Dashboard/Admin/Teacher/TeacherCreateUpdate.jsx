@@ -5,6 +5,8 @@ import TeacherGeneralInfo from "./TeacherGeneralInfo";
 import TeacherEducation from "./TeacherEducation";
 import TeacherJobExperience from "./TeacherJobExperience";
 import TeacherPaymentProgress from "./TeacherPaymentProgress";
+import TeacherPhoto from "./TeacherPhoto";
+import FormSuccess from "../../../Component/AdmissionForm/FormSuccess/FormSuccess";
 
 const TeacherCreateUpdate = () => {
   const [currentPage, setCurrentPage] = useState("signup");
@@ -22,6 +24,10 @@ const TeacherCreateUpdate = () => {
         <TeacherJobExperience setPage={setCurrentPage} />
       ) : currentPage === "payment" ? (
         <TeacherPaymentProgress setPage={setCurrentPage} />
+      ) : currentPage === "photo" ? (
+        <TeacherPhoto setPage={setCurrentPage} />
+      ) : currentPage === "form_success" ? (
+        <FormSuccess />
       ) : null}
     </div>
   );
