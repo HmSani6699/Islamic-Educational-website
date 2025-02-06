@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from "recharts";
 
 const Calendar = ({ monthData }) => {
   const { month, present_date, absent_date } = monthData;
@@ -37,55 +45,98 @@ const Calendar = ({ monthData }) => {
     return "hover:bg-gray-200";
   };
 
+  // Pie Chart Data
+  const pieData = [
+    { name: "Present", value: presentDates.length, color: "#4CAF50" }, // Green
+    { name: "Absent", value: absentDates.length, color: "#F44336" }, // Red
+  ];
+
   return (
-    <div className="max-w-lg mx-auto p-4 shadow-lg rounded-lg bg-white">
-      <h2 className="text-[25px] font-semibold text-center mb-4 capitalize">
-        {month}
-      </h2>
-      <div className="grid grid-cols-7 gap-2">
-        {/* সপ্তাহের দিন */}
-        {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
-          <div
-            key={day}
-            className={`font-bold text-center ${
-              day === "FRI" ? "text-red-600" : "text-gray-700"
-            }`}
-          >
-            {day}
-          </div>
-        ))}
+    <div className="flex rounded-lg bg-white">
+      <div className="w-[50%] p-4 rounded-lg ">
+        <h2 className="text-center text-xl font-semibold mb-[8px]">
+          Attendance Overview
+        </h2>
+        <ResponsiveContainer width="100%" height={250}>
+          <PieChart>
+            <Pie
+              data={pieData}
+              dataKey="value"
+              nameKey="name"
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              fill="#8884d8"
+              label
+            >
+              {pieData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Pie>
+            <Tooltip />
+            <Legend />
+          </PieChart>
+        </ResponsiveContainer>
 
-        {/* ক্যালেন্ডারের দিন */}
-        {calendarDays.map((day, index) => {
-          if (day === null) {
-            return <div key={index} className="p-2"></div>;
-          }
-
-          const date = `${String(monthIndex + 1).padStart(2, "0")}/${String(
-            day
-          ).padStart(2, "0")}/${year}`;
-          const bgColor = getDayBgColor(date);
-
-          const isFriday = new Date(year, monthIndex, day).getDay() === 5;
-
-          return (
+        {/* Total Present & Absent (Text View) */}
+        <div className="mt-4 text-center">
+          <p className="text-lg font-semibold text-green-600">
+            Total Present: {presentDates.length}
+          </p>
+          <p className="text-lg font-semibold text-red-600">
+            Total Absent: {absentDates.length}
+          </p>
+        </div>
+      </div>
+      <div className=" w-[50%] p-4 shadow-lg ">
+        <h2 className="text-[25px] font-semibold text-center mb-4 capitalize">
+          {month}
+        </h2>
+        <div className="grid grid-cols-7 gap-2">
+          {/* সপ্তাহের দিন */}
+          {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((day) => (
             <div
-              key={index}
-              className={`rounded-full border text-center p-2 ${bgColor} ${
-                isFriday ? "text-red-600 font-bold" : "text-gray-800"
+              key={day}
+              className={`font-bold text-center ${
+                day === "FRI" ? "text-red-600" : "text-gray-700"
               }`}
-              title={
-                presentDates.includes(date)
-                  ? "Present"
-                  : absentDates.includes(date)
-                  ? "Absent"
-                  : "No Data"
-              }
             >
               {day}
             </div>
-          );
-        })}
+          ))}
+
+          {/* ক্যালেন্ডারের দিন */}
+          {calendarDays.map((day, index) => {
+            if (day === null) {
+              return <div key={index} className="p-2"></div>;
+            }
+
+            const date = `${String(monthIndex + 1).padStart(2, "0")}/${String(
+              day
+            ).padStart(2, "0")}/${year}`;
+            const bgColor = getDayBgColor(date);
+
+            const isFriday = new Date(year, monthIndex, day).getDay() === 5;
+
+            return (
+              <div
+                key={index}
+                className={`rounded-full border text-center p-2 ${bgColor} ${
+                  isFriday ? "text-red-600 font-bold" : "text-gray-800"
+                }`}
+                title={
+                  presentDates.includes(date)
+                    ? "Present"
+                    : absentDates.includes(date)
+                    ? "Absent"
+                    : "No Data"
+                }
+              >
+                {day}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

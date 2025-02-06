@@ -62,7 +62,7 @@ const AttendanceView = ({ setOpen }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center  bg-[#03240399]">
-      <div className=" bg-white  w-[600px] rounded-[15px] p-[20px] relative ">
+      <div className=" bg-white  w-[800px] rounded-[15px] p-[20px] relative ">
         {/* ===> Close icon <==== */}
         <IoIosCloseCircle
           onClick={() => setOpen(false)}
