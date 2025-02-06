@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TeacherList from "./TeacherList";
 import { FaArrowLeft, FaPlus } from "react-icons/fa";
 import TeacherCreateUpdate from "./TeacherCreateUpdate";
+import TeacherAddClass from "./TeacherAddClass";
 
 const Teacher = () => {
   const [currentPage, setCurrentPage] = useState("teacherList");
@@ -29,7 +30,8 @@ const Teacher = () => {
               onClick={() => setCurrentPage("teacherList")}
               className="text-[20px] font-semibold py-[6px] flex items-center gap-[10px] cursor-pointer"
             >
-              <FaArrowLeft /> Teacher Create
+              <FaArrowLeft />
+              {currentPage === "teacherList" ? "Teacher Create" : "Add Class"}
             </h2>
           )}
         </div>
@@ -45,7 +47,7 @@ const Teacher = () => {
         )}
       </div>
       {currentPage === "teacherList" ? (
-        <TeacherList />
+        <TeacherList setPage={setCurrentPage} />
       ) : currentPage === "teacherCreateUpdate" ? (
         <TeacherCreateUpdate
           currentForm={createTechercurrentForm}

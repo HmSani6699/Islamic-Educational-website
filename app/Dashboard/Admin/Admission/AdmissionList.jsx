@@ -5,6 +5,7 @@ import delete_icon from "../../../../public/svg/delete_icon.svg";
 import { LuView } from "react-icons/lu";
 import { MdOutlineDeleteSweep } from "react-icons/md";
 import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
+import user from "../../../../public/man.png";
 
 const AdmissionList = () => {
   return (
@@ -45,6 +46,12 @@ const AdmissionList = () => {
               >
                 Address
               </th>
+              <th
+                scope="col"
+                className="h-10 px-0 text-[#2E3138] text-[16px] font-[500]  "
+              >
+                Photo
+              </th>
 
               <th
                 scope="col"
@@ -59,6 +66,11 @@ const AdmissionList = () => {
               <td className="h-10 py-2">Md Norol Amin</td>
               <td className="h-10 py-2">Md Nivale</td>
               <td className="h-10 py-2">Sonarga,Narayongonj</td>
+              <td className="h-10 py-2 ">
+                <div className="w-[40px]">
+                  <img className="h-full w-full" src={user} alt="user image" />
+                </div>
+              </td>
               <td className="h-10 py-2 flex justify-center">
                 <div className="flex items-center gap-[10px]">
                   <button>
@@ -73,11 +85,16 @@ const AdmissionList = () => {
                 </div>
               </td>
             </tr>
-            <tr className="bg-[#F1F2F3] ">
-              <td className="h-10 py-2 pl-[10px]">2</td>
-              <td className="h-10 py-2">Md Galib </td>
-              <td className="h-10 py-2">Md Galib Misba</td>
-              <td className="h-10 py-2">Sonarga,Dhaka</td>
+            <tr>
+              <td className="h-10 py-2 pl-[10px]">1</td>
+              <td className="h-10 py-2">Md Norol Amin</td>
+              <td className="h-10 py-2">Md Nivale</td>
+              <td className="h-10 py-2">Sonarga,Narayongonj</td>
+              <td className="h-10 py-2 ">
+                <div className="w-[40px] ">
+                  <img className="h-full w-full" src={user} alt="user image" />
+                </div>
+              </td>
               <td className="h-10 py-2 flex justify-center">
                 <div className="flex items-center gap-[10px]">
                   <button>
@@ -92,30 +109,16 @@ const AdmissionList = () => {
                 </div>
               </td>
             </tr>
-            <tr className="">
-              <td className="h-10 py-2 pl-[10px]">3</td>
-              <td className="h-10 py-2">Md Galib </td>
-              <td className="h-10 py-2">Md Galib Misba</td>
-              <td className="h-10 py-2">Sonarga,Dhaka</td>
-              <td className="h-10 py-2 flex justify-center">
-                <div className="flex items-center gap-[10px]">
-                  <button>
-                    <img src={update_green_icon} alt="" />
-                  </button>
-                  <button>
-                    <img src={delete_icon} alt="" />
-                  </button>
-                  <button>
-                    <LuView />
-                  </button>
+            <tr>
+              <td className="h-10 py-2 pl-[10px]">1</td>
+              <td className="h-10 py-2">Md Norol Amin</td>
+              <td className="h-10 py-2">Md Nivale</td>
+              <td className="h-10 py-2">Sonarga,Narayongonj</td>
+              <td className="h-10 py-2 ">
+                <div className="w-[40px]">
+                  <img className="h-full w-full" src={user} alt="user image" />
                 </div>
               </td>
-            </tr>
-            <tr className="bg-[#F1F2F3] ">
-              <td className="h-10 py-2 pl-[10px]">4</td>
-              <td className="h-10 py-2">Md Galib </td>
-              <td className="h-10 py-2">Md Galib Misba</td>
-              <td className="h-10 py-2">Sonarga,Dhaka</td>
               <td className="h-10 py-2 flex justify-center">
                 <div className="flex items-center gap-[10px]">
                   <button>

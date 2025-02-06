@@ -24,6 +24,13 @@ const AdminLeftNavber = () => {
       >
         <FaUserGraduate className="text-[20px]" />
       </NavlLink>
+      <NavlLink
+        url={"/admin/teacher_add_class"}
+        title={"Teacher Add Class"}
+        children_true={false}
+      >
+        <LuClipboardPenLine className="text-[20px]" />
+      </NavlLink>
     </div>
   );
 };

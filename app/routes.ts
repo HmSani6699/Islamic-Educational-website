@@ -9,6 +9,7 @@ export default [
     route("admission", "./Dashboard/Admin/Admission/Amission.jsx"),
     route("admission_form", "./Component/AdmissionForm/AdmissionForm.jsx"),
     route("teacher", "./dashboard/admin/teacher/Teacher.jsx"),
+    route("teacher_add_class", "./dashboard/admin/teacher/TeacherAddClass/TeacherAddClass.jsx"),
   ]),
 
     // =====> Teacher routes  <======//

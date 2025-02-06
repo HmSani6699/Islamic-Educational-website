@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
-import delete_icon from "../../../../public/svg/delete_icon.svg";
+import update_green_icon from "../../../../../public/svg/updateGreenIcon.svg";
+import delete_icon from "../../../../../public/svg/delete_icon.svg";
 import { LuView } from "react-icons/lu";
 import { MdOutlineDeleteSweep } from "react-icons/md";
-import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
-import user from "../../../../public/man.png";
+import user from "../../../../../public/man.png";
 import { FaPlus } from "react-icons/fa";
+import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearchForm";
 
-const TeacherList = ({ setPage }) => {
+const ClassList = ({ setPage }) => {
   return (
     <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-10">
       {/* =====> Search Div  <====== */}
@@ -45,17 +45,18 @@ const TeacherList = ({ setPage }) => {
             >
               Category
             </th>
-            <th
-              scope="col"
-              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center "
-            >
-              Total Class
-            </th>
+
             <th
               scope="col"
               className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center "
             >
               Photo
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center "
+            >
+              Total Class
             </th>
 
             <th
@@ -71,52 +72,21 @@ const TeacherList = ({ setPage }) => {
             <td className="h-10 py-2">Md Norol Amin</td>
             <td className="h-10 py-2">Narayongonj, Dhaka</td>
             <td className="h-10 py-2">Mogtob</td>
-            <td className="h-10 py-2 text-center">3</td>
-            <td className="h-10 py-2 ">
-              <div className="w-[40px] ml-[30px]">
-                <img className="h-full w-full" src={user} alt="user image" />
-              </div>
-            </td>
-            <td className="h-10 py-2 mt-[10px] flex justify-center">
-              <div className="flex items-center gap-[10px]">
-                {/* <button
-                  onClick={() => setPage("addClass")}
-                  className="flex items-center gap-[8px] bg-[#008000] text-[14px] text-white px-[10px] py-[5px] rounded-[8px] "
-                >
-                  <FaPlus /> Add class
-                </button> */}
-                <button>
-                  <img src={update_green_icon} alt="" />
-                </button>
 
-                <button>
-                  <img src={delete_icon} alt="" />
-                </button>
-                <button>
-                  <LuView />
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td className="h-10 py-2 pl-[10px]">1</td>
-            <td className="h-10 py-2">Md Norol Amin</td>
-            <td className="h-10 py-2">Narayongonj, Dhaka</td>
-            <td className="h-10 py-2">Mogtob</td>
-            <td className="h-10 py-2 text-center">3</td>
             <td className="h-10 py-2 ">
               <div className="w-[40px] ml-[30px]">
                 <img className="h-full w-full" src={user} alt="user image" />
               </div>
             </td>
+            <td className="h-10 py-2 text-center">3</td>
             <td className="h-10 py-2 mt-[10px] flex justify-center">
               <div className="flex items-center gap-[10px]">
-                {/* <button
-                  onClick={() => setPage("addClass")}
+                <button
+                  onClick={() => setPage("classCreateUpdate")}
                   className="flex items-center gap-[8px] bg-[#008000] text-[14px] text-white px-[10px] py-[5px] rounded-[8px] "
                 >
                   <FaPlus /> Add class
-                </button> */}
+                </button>
                 <button>
                   <img src={update_green_icon} alt="" />
                 </button>
@@ -136,4 +106,4 @@ const TeacherList = ({ setPage }) => {
   );
 };
 
-export default TeacherList;
+export default ClassList;
