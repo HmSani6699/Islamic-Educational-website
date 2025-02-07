@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          "Oswald",
+          '"Inter"',
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
