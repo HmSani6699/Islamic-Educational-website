@@ -3,7 +3,7 @@ import CustomSearchForm from "../../../../Component/CustomSearchForm/CustomSearc
 import update_green_icon from "../../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../../public/svg/delete_icon.svg";
 
-const ClassList = () => {
+const ClassGriupList = () => {
   return (
     <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-10">
       {/* =====> Search Div  <====== */}
@@ -19,14 +19,45 @@ const ClassList = () => {
             <th
               scope="col"
               className="h-10 ps-2.5 text-[#2E3138] text-[16px] font-[500]"
+              text-center
             >
               ID
             </th>
             <th
               scope="col"
-              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] "
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
             >
-              Name
+              Bivhag Name
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
+            >
+              Class Name
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
+            >
+              Group Name
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
+            >
+              Total Seats
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
+            >
+              Occupied Seats
+            </th>
+            <th
+              scope="col"
+              className="h-10 px-0 text-[#2E3138] text-[16px] font-[500] text-center"
+            >
+              Available Seats
             </th>
 
             <th
@@ -38,8 +69,13 @@ const ClassList = () => {
           </tr>
 
           <tr>
-            <td className="h-10 py-2 pl-[10px]">1</td>
-            <td className="h-10 py-2">Md Norol Amin</td>
+            <td className="  h-10 py-2 pl-[10px]">1</td>
+            <td className=" text-center h-10 py-2">Mogtob</td>
+            <td className=" text-center h-10 py-2">One</td>
+            <td className=" text-center h-10 py-2">Sadiq</td>
+            <td className=" text-center h-10 py-2">50</td>
+            <td className=" text-center h-10 py-2">30</td>
+            <td className=" text-center h-10 py-2">20</td>
 
             <td className="h-10 py-2 mt-[10px] flex justify-center">
               <div className="flex items-center gap-[10px]">
@@ -54,24 +90,13 @@ const ClassList = () => {
             </td>
           </tr>
           <tr>
-            <td className="h-10 py-2 pl-[10px]">1</td>
-            <td className="h-10 py-2">Md Norol Amin</td>
-
-            <td className="h-10 py-2 mt-[10px] flex justify-center">
-              <div className="flex items-center gap-[10px]">
-                <button>
-                  <img src={update_green_icon} alt="" />
-                </button>
-
-                <button>
-                  <img src={delete_icon} alt="" />
-                </button>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td className="h-10 py-2 pl-[10px]">1</td>
-            <td className="h-10 py-2">Md Norol Amin</td>
+            <td className="  h-10 py-2 pl-[10px]">1</td>
+            <td className=" text-center h-10 py-2">Mogtob</td>
+            <td className=" text-center h-10 py-2">One</td>
+            <td className=" text-center h-10 py-2">Sadiq</td>
+            <td className=" text-center h-10 py-2">50</td>
+            <td className=" text-center h-10 py-2">30</td>
+            <td className=" text-center h-10 py-2">20</td>
 
             <td className="h-10 py-2 mt-[10px] flex justify-center">
               <div className="flex items-center gap-[10px]">
@@ -91,4 +116,4 @@ const ClassList = () => {
   );
 };
 
-export default ClassList;
+export default ClassGriupList;

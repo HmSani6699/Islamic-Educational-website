@@ -39,16 +39,42 @@ const BivhagList = () => {
 
           <tr>
             <td className="h-10 py-2 pl-[10px]">1</td>
+            <td className="h-10 py-2">Md Korim </td>
+
+            <td className="h-10 py-2 mt-[10px] flex justify-center">
+              <div className="flex items-center gap-[10px]">
+                <button>
+                  <img src={update_green_icon} alt="" />
+                </button>
+
+                <button>
+                  <img src={delete_icon} alt="" />
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="h-10 py-2 pl-[10px]">1</td>
+            <td className="h-10 py-2">Md Sadiq</td>
+
+            <td className="h-10 py-2 mt-[10px] flex justify-center">
+              <div className="flex items-center gap-[10px]">
+                <button>
+                  <img src={update_green_icon} alt="" />
+                </button>
+
+                <button>
+                  <img src={delete_icon} alt="" />
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td className="h-10 py-2 pl-[10px]">1</td>
             <td className="h-10 py-2">Md Norol Amin</td>
 
             <td className="h-10 py-2 mt-[10px] flex justify-center">
               <div className="flex items-center gap-[10px]">
-                {/* <button
-                  onClick={() => setPage("addClass")}
-                  className="flex items-center gap-[8px] bg-[#008000] text-[14px] text-white px-[10px] py-[5px] rounded-[8px] "
-                >
-                  <FaPlus /> Add class
-                </button> */}
                 <button>
                   <img src={update_green_icon} alt="" />
                 </button>
