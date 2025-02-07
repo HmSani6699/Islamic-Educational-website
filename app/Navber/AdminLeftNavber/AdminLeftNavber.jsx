@@ -1,36 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import NavlLink from "../../Component/NavList/NavLink/NavlLink";
 import { MdOutlineDashboard } from "react-icons/md";
-import { FaBook, FaUserGraduate } from "react-icons/fa";
+import {
+  FaBook,
+  FaChalkboardTeacher,
+  FaGraduationCap,
+  FaLayerGroup,
+  FaUniversity,
+  FaUserGraduate,
+} from "react-icons/fa";
 import { LuClipboardPenLine } from "react-icons/lu";
+import { IoIosArrowUp } from "react-icons/io";
+import { useLocation } from "react-router";
 
 const AdminLeftNavber = () => {
+  const [openAcademicMenu, setOpenAcademicMenu] = useState(false);
+  const loation = useLocation();
+
   return (
     <div>
-      <NavlLink url={"/admin"} title={"Dashboard"} children_true={true}>
+      <NavlLink url={"/admin"} title={"ড্যাশবোর্ড"} children_true={true}>
         <MdOutlineDashboard className="text-[20px]" />
       </NavlLink>
       <NavlLink
         url={"/admin/admission"}
-        title={"Admission List"}
+        title={"ভর্তি লিস্ট"}
         children_true={false}
       >
         <LuClipboardPenLine className="text-[20px]" />
       </NavlLink>
       <NavlLink
         url={"/admin/teacher"}
-        title={"Teacher List"}
+        title={"শিক্ষক লিস্ট"}
         children_true={false}
       >
         <FaUserGraduate className="text-[20px]" />
       </NavlLink>
       <NavlLink
         url={"/admin/teacher_add_class"}
-        title={"Teacher Add Class"}
+        title={"শিক্ষক ক্লাস লিস্ট"}
         children_true={false}
       >
         <LuClipboardPenLine className="text-[20px]" />
       </NavlLink>
+
+      <div>
+        <div
+          onClick={() => setOpenAcademicMenu(!openAcademicMenu)}
+          className={` ${
+            openAcademicMenu
+              ? "nav_activ_text_colors nav_activ_bg_colors nav_activ_left_border_colors"
+              : ""
+          } flex  items-center justify-between   py-[8px] px-[8px] my-[8px] text-black 
+  hover:bg-[#3b6b3b3a] hover:text-[#008000] hover:border-l-[2px] hover:border-[#008000] 
+  rounded-l-[4px] transition-all duration-300 cursor-pointer`}
+        >
+          <h2 className="flex gap-[10px]">
+            <FaGraduationCap className="text-[22px]" /> শিক্ষা ম্যানেজমেন্ট
+          </h2>
+          <IoIosArrowUp
+            className={`transition-all duration-300 ${
+              openAcademicMenu ? "rotate-[-180deg]" : "rotate-[0deg]"
+            }`}
+          />
+        </div>
+
+        {/* Dropdown Menu */}
+        <div
+          className={`ml-[10px] overflow-hidden transition-all duration-500 ease-in-out ${
+            openAcademicMenu ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          {/* Nav Links with Correct Icons */}
+          <NavlLink
+            url={"/admin/add_bivhag"}
+            title={"বিভাগ লিস্ট"}
+            children_true={false}
+          >
+            <FaUniversity className="text-[20px]" />
+          </NavlLink>
+          <NavlLink
+            url={"/admin/add_class"}
+            title={"ক্লাস লিস্ট"}
+            children_true={false}
+          >
+            <FaChalkboardTeacher className="text-[20px]" />
+          </NavlLink>
+          <NavlLink
+            url={"/admin/add_class_group"}
+            title={" ক্লাস গ্রুপ লিস্ট"}
+            children_true={false}
+          >
+            <FaLayerGroup className="text-[20px]" />
+          </NavlLink>
+        </div>
+      </div>
     </div>
   );
 };
