@@ -12,6 +12,7 @@ import {
 import { LuClipboardPenLine } from "react-icons/lu";
 import { IoIosArrowUp } from "react-icons/io";
 import { useLocation } from "react-router";
+import { BiBook } from "react-icons/bi";
 
 const AdminLeftNavber = () => {
   const [openAcademicMenu, setOpenAcademicMenu] = useState(false);
@@ -78,6 +79,13 @@ const AdminLeftNavber = () => {
             children_true={false}
           >
             <FaUniversity className="text-[20px]" />
+          </NavlLink>
+          <NavlLink
+            url={"/admin/add_bivhag"}
+            title={"শ্রেণী লিস্ট"}
+            children_true={false}
+          >
+            <BiBook className="text-[20px]" />
           </NavlLink>
           <NavlLink
             url={"/admin/add_class"}

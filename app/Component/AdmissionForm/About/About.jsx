@@ -153,18 +153,18 @@ const About = ({ setCurrentPage }) => {
         {/* === Phone number  === */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px] lg:mb-[20px]">
           <InputField
-            title="মোবাইল"
+            title="মোবাইল ( বাবা )"
             type={"text"}
             placeholder={"আপনার ছাত্রের মোবাইল সংখ্যা লিখুন"}
             setValue={setStudentName}
           />
-          <div className="mt-[22px]">
-            <InputField
-              type={"text"}
-              placeholder={"আপনার ছাত্রের মোবাইল সংখ্যা লিখুন"}
-              setValue={setStudentName}
-            />
-          </div>
+
+          <InputField
+            title="মোবাইল ( মা )"
+            type={"text"}
+            placeholder={"আপনার ছাত্রের মোবাইল সংখ্যা লিখুন"}
+            setValue={setStudentName}
+          />
         </div>
         {/* ==== Submit button ==== */}
         <div className="flex justify-end mt-[30px] mb-[15px]">
