@@ -81,7 +81,7 @@ const AdminLeftNavber = () => {
             <FaUniversity className="text-[20px]" />
           </NavlLink>
           <NavlLink
-            url={"/admin/add_bivhag"}
+            url={"/admin/add_category"}
             title={"শ্রেণী লিস্ট"}
             children_true={false}
           >

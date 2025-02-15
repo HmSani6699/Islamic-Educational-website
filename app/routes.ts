@@ -11,6 +11,7 @@ export default [
     route("teacher", "./dashboard/admin/teacher/Teacher.jsx"),
     route("teacher_add_class", "./dashboard/admin/teacher/TeacherAddClass/TeacherAddClass.jsx"),
     route("add_bivhag", "./dashboard/admin/AcademicSetup/AddBivhag/AddBivhagIndex.jsx"),
+    route("add_category", "./dashboard/admin/AcademicSetup/AddCategoy/AddCategory.jsx"),
     route("add_class", "./dashboard/admin/AcademicSetup/AddClass/AddClassIndex.jsx"),
     route("add_class_group", "./dashboard/admin/AcademicSetup/AddClassGroup/AddClassGroupIndex.jsx"),
   ]),
