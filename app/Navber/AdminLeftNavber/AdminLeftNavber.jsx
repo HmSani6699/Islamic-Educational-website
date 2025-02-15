@@ -101,6 +101,13 @@ const AdminLeftNavber = () => {
           >
             <FaLayerGroup className="text-[20px]" />
           </NavlLink>
+          <NavlLink
+            url={"/admin/add_class_group"}
+            title={" ক্লাস গ্রুপ লিস্ট"}
+            children_true={false}
+          >
+            <FaLayerGroup className="text-[20px]" />
+          </NavlLink>
         </div>
       </div>
     </div>

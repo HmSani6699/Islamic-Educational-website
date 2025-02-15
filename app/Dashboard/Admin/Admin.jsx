@@ -10,13 +10,13 @@ const Admin = () => {
   return (
     <div className="flex max-w-[1400px] mx-auto bg-gray-100">
       {/* ====> Lift sidber  <====5*/}
-      <div className="w-[300px] bg-white text-white min-h-screen rounded-r-[20px] ">
+      <div className="w-[300px] bg-white text-white min-h-screen overflow-hidden rounded-r-[20px] ">
         {/* ====> Logo div <==== */}
         <div className="flex items-center justify-center mt-[20px]">
           <img className="w-[100px] h-[100px]" src={logo} alt="website logo" />
         </div>
         {/* =====> Navber <===== */}
-        <nav className="mt-[20px] px-[10px] ">
+        <nav className="mt-[20px] px-[10px] max-h-[90vh] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
           <AdminLeftNavber />
           {/* ===> Log out <==== */}
         </nav>
