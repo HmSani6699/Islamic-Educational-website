@@ -21,8 +21,6 @@ body {
   background-color: white;
 }
 
-.nav_colors {
-}
 .nav_activ_text_colors {
   color: #008000;
 }
@@ -31,4 +29,10 @@ body {
 }
 .nav_activ_left_border_colors {
   border-left: 2px solid green;
+}
+
+/* ====== admin sidescrolling bar  ==== */
+
+.adminScrollbar::-webkit-scrollbar {
+  width: 0;
 }
