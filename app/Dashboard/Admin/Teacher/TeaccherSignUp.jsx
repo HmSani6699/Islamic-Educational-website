@@ -4,20 +4,22 @@ import { GrLinkNext } from "react-icons/gr";
 
 const TeaccherSignUp = ({ setPage }) => {
   return (
-    <div className="bg-white p-[20px] rounded-[10px] mt-10 w-[500px]">
+    <div className="bg-white p-[20px] rounded-[10px] mt-10 w-full">
       <h2 className="text-[22px]  font-semibold text-center mt-[8px]">
         শিক্ষক অ্যাকাউন্ট
       </h2>
 
       {/* =====>  Create acount form <===== */}
       <div>
-        <div className="mt-[50px] flex flex-col gap-[25px]">
-          <InputField
-            title="শিক্ষকের নাম"
-            type={"text"}
-            placeholder={"আপনার শিক্ষকের নাম লিখুন"}
-            setValue={""}
-          />
+        <div className="mt-[50px] grid grid-cols-1 lg:grid-cols-2 gap-[25px]">
+          <div className="w-full col-span-2">
+            <InputField
+              title="শিক্ষকের নাম"
+              type={"text"}
+              placeholder={"আপনার শিক্ষকের নাম লিখুন"}
+              setValue={""}
+            />
+          </div>
           <InputField
             title="শিক্ষকের ইমেল"
             type={"text"}
