@@ -19,7 +19,7 @@ const AdminLeftNavber = () => {
   const loation = useLocation();
 
   return (
-    <div>
+    <div className="pl-[20px] pb-[50px]">
       <NavlLink url={"/admin"} title={"ড্যাশবোর্ড"} children_true={true}>
         <MdOutlineDashboard className="text-[20px]" />
       </NavlLink>
@@ -56,7 +56,7 @@ const AdminLeftNavber = () => {
   hover:bg-[#3b6b3b3a] hover:text-[#008000] hover:border-l-[2px] hover:border-[#008000] 
   rounded-l-[4px] transition-all duration-300 cursor-pointer`}
         >
-          <h2 className="flex gap-[10px]">
+          <h2 className="flex gap-[20px]">
             <FaGraduationCap className="text-[22px]" /> শিক্ষা ম্যানেজমেন্ট
           </h2>
           <IoIosArrowUp
@@ -93,13 +93,6 @@ const AdminLeftNavber = () => {
             children_true={false}
           >
             <FaChalkboardTeacher className="text-[20px]" />
-          </NavlLink>
-          <NavlLink
-            url={"/admin/add_class_group"}
-            title={" ক্লাস গ্রুপ লিস্ট"}
-            children_true={false}
-          >
-            <FaLayerGroup className="text-[20px]" />
           </NavlLink>
           <NavlLink
             url={"/admin/add_class_group"}

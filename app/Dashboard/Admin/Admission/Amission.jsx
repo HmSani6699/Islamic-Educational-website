@@ -9,7 +9,7 @@ const Admission = () => {
   return (
     <div>
       {/* ======> Top part <==== */}
-      <div className="flex items-center justify-between  px-[20px] py-[10px] bg-white lg:mt-[40px] rounded-t-[20px] border-t-[2px] border-[#008000]">
+      <div className="flex items-center justify-between  px-[20px] py-[10px] bg-[#FFF] lg:mt-[40px] rounded-t-[20px] border-t-[2px] border-[#008000]">
         <h2 className="text-[20px] font-semibold">All Admission (20)</h2>
         <button
           onClick={() => navigate("/admin/admission_form")}

@@ -17,7 +17,7 @@ const Admin = () => {
       <div
         className={`lg:block ${
           isSidebarOpen ? "block" : "hidden"
-        } fixed z-50 w-[300px] min-h-screen bg-white shadow-lg`}
+        } fixed z-50 w-[270px] min-h-screen bg-white shadow-lg`}
       >
         <div className="flex items-end justify-end lg:hidden p-[20px]">
           <button onClick={() => setIsSidebarOpen(false)}>
@@ -41,7 +41,7 @@ const Admin = () => {
 
       {/* ====> Right Content <==== */}
       <div
-        className={`transition-all duration-300 w-full lg:pl-[300px] relative`}
+        className={`transition-all duration-300 w-full  lg:pl-[270px] relative`}
       >
         {/* ====> Top Navbar (Fixed) <==== */}
         <div className="lg:flex left-0 w-full lg:items-end lg:justify-end">

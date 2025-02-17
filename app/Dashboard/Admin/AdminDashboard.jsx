@@ -6,70 +6,113 @@ import CustomSearchForm from "../../Component/CustomSearchForm/CustomSearchForm"
 import update_green_icon from "../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../public/svg/delete_icon.svg";
 import { LuView } from "react-icons/lu";
+import student from "../../../public/svg/student.svg";
+import teacher from "../../../public/svg/teacher.svg";
+import staff from "../../../public/svg/staff.svg";
+import subject from "../../../public/svg/subject.svg";
 
 const AdminDashboard = () => {
   return (
-    <div className="lg:my-[50px]">
-      <div className="flex gap-[20px]">
-        <div className="grid grid-cols-1 lg:grid-cols-3  gap-[20px] w-full mb-[50px]">
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">শিশু শ্রেণী</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
+    <div className="lg:my-[15px]">
+      <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[50px]">
+        {/* ====> Total Student <==== */}
+        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
+          <div className="flex items-center gap-[10px]">
+            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+              <img src={student} alt="" />
+            </div>
+            <div>
+              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
+              <p className="text-gray-500 text-[14px]">Total Student</p>
             </div>
           </div>
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">প্রথম শ্রেণী</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
-            </div>
-          </div>
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">দ্বিতীয় শ্রেণী</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
-            </div>
-          </div>
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">তৃতীয় শ্রেণী</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
-            </div>
-          </div>
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">নাজেরা বিভাগ</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
-            </div>
-          </div>
-          <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">
-            <h2 className="text-[20px] font-semibold">হিফজ বিভাগ</h2>
-            <div className=" flex items-center justify-between mt-[15px]">
-              <h3 className=" tesxt-[18px]">59</h3>
-              <FaUserCheck className="text-[40px] text-[#008000] font-bold" />
-            </div>
+          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
+          <div className="flex items-center justify-between  ">
+            <h1 className="text-gray-500 text-[14px]">
+              Active :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
+            </h1>
+            <h1 className="text-gray-500 text-[14px]">
+              Inactive :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
+            </h1>
           </div>
         </div>
-        {/* <div className="w-[30%] h-[280px] rounded-[10px]">
-          <img
-            className="h-full w-full rounded-[10px]"
-            src={dashboard_image}
-            alt=""
-          />
-        </div> */}
+        {/* ====> Total Student <==== */}
+        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
+          <div className="flex items-center gap-[10px]">
+            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+              <img src={student} alt="" />
+            </div>
+            <div>
+              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
+              <p className="text-gray-500 text-[14px]">Total Student</p>
+            </div>
+          </div>
+          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
+          <div className="flex items-center justify-between  ">
+            <h1 className="text-gray-500 text-[14px]">
+              Active :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
+            </h1>
+            <h1 className="text-gray-500 text-[14px]">
+              Inactive :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
+            </h1>
+          </div>
+        </div>
+        {/* ====> Total Student <==== */}
+        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
+          <div className="flex items-center gap-[10px]">
+            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+              <img src={student} alt="" />
+            </div>
+            <div>
+              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
+              <p className="text-gray-500 text-[14px]">Total Student</p>
+            </div>
+          </div>
+          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
+          <div className="flex items-center justify-between  ">
+            <h1 className="text-gray-500 text-[14px]">
+              Active :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
+            </h1>
+            <h1 className="text-gray-500 text-[14px]">
+              Inactive :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
+            </h1>
+          </div>
+        </div>
+        {/* ====> Total Student <==== */}
+        <div className="bg-white p-[10px] shadow-md rounded-[10px]">
+          <div className="flex items-center gap-[10px]">
+            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+              <img src={student} alt="" />
+            </div>
+            <div>
+              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
+              <p className="text-gray-500 text-[14px]">Total Student</p>
+            </div>
+          </div>
+          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
+          <div className="flex items-center justify-between  ">
+            <h1 className="text-gray-500 text-[14px]">
+              Active :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
+            </h1>
+            <h1 className="text-gray-500 text-[14px]">
+              Inactive :
+              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
+            </h1>
+          </div>
+        </div>
       </div>
-      {/* <div className="mt-[20px] w-full rounded-[10px]">
-        <img
-          className="w-full h-[450px]  rounded-[10px]"
-          src={dashboard_image1}
-          alt=""
-        />
-      </div> */}
+
+      {/* ===== */}
+
+      {/* ===== */}
+
       <div className="w-full overflow-x-auto bg-white py-5 px-2.5 rounded-[10px] mt-[20px]">
         {/* =====> Search Div  <====== */}
         <div className="flex items-center justify-between">
