@@ -5,12 +5,12 @@ import { GrLinkNext } from "react-icons/gr";
 const TeacherGeneralInfo = ({ setPage }) => {
   return (
     <div className="bg-white p-[20px] rounded-[10px] mt-10  w-full">
-      <h2 className="text-[22px]  font-semibold text-center mt-[8px]">
+      <h2 className="text-[20px]  font-semibold mt-[8px] mb-[20px]">
         শিক্ষকের পরিচয়
       </h2>
       {/* =====>  Create acount form <===== */}
       <div>
-        <div className="mt-[50px] grid grid-cols-1 lg:grid-cols-2  gap-[25px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2  gap-[25px]">
           <InputField
             title="শিক্ষকের নাম"
             type={"text"}

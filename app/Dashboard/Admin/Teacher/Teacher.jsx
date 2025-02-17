@@ -30,6 +30,47 @@ const Teacher = () => {
         </button>
       </div>
 
+      <div
+        className={`${
+          currentPage === "teacherList" ||
+          currentPage === "form_success" ||
+          createTechercurrentForm === "signup"
+            ? "hidden"
+            : "block"
+        } mt-[20px]`}
+      >
+        <h2 className="text-[25px] font-semibold text-center mb-[40px]">
+          ভর্তি ফরম
+        </h2>
+        {/* =====> Progress  <===== */}
+        <div className="mb-[20px] mt-[50px]">
+          <div className="">
+            <div className="flex items-center justify-between z-10">
+              <div className=" bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+            </div>
+            <div className="border-[3px] rounded-full -mt-[15.5px]"></div>
+          </div>
+          <div className="-mt-[15.5px]">
+            <div className="flex items-center justify-between z-10">
+              <div className=" bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-[#008000] rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-[#008000] rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-[#008000] rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+              <div className="h-[25px] w-[25px] bg-gray-200 rounded-full"></div>
+            </div>
+            <div className="border-[3px] border-[#008000] rounded-full -mt-[15.5px] w-[50%]"></div>
+          </div>
+        </div>
+      </div>
+
       {currentPage === "teacherList" ? (
         <TeacherList setPage={setCurrentPage} />
       ) : currentPage === "teacherCreateUpdate" ? (

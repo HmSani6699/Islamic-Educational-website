@@ -44,34 +44,39 @@ const Admin = () => {
         className={`transition-all duration-300 w-full lg:pl-[300px] relative`}
       >
         {/* ====> Top Navbar (Fixed) <==== */}
-        <div className="fixed left-0 lg:left-[300px] right-0 bg-white shadow-md z-40 lg:mx-[20px] lg:mt-[20px] lg:rounded-full rounded-b-[8px] ">
-          <div className=" pl-[20px] pr-[10px] py-[8px] flex items-center justify-between rounded-[20px]">
-            {/* Sidebar Toggle Button (For Mobile) */}
-            <button
-              className="lg:hidden block"
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            >
-              <FiMenu className="text-2xl" />
-            </button>
+        <div className="flex items-end justify-end">
+          <div className="  bg-white shadow-md z-40 lg:mx-[20px] lg:mt-[20px] lg:rounded-full rounded-b-[8px] ">
+            <div className=" pl-[20px] pr-[10px] py-[8px] flex items-center justify-between rounded-[20px]">
+              {/* <div className="fixed left-0 lg:left-[300px] right-0 bg-white shadow-md z-40 lg:mx-[20px] lg:mt-[20px] lg:rounded-full rounded-b-[8px] ">
+          <div className=" pl-[20px] pr-[10px] py-[8px] flex items-center justify-between rounded-[20px]"> */}
+              {/* Sidebar Toggle Button (For Mobile) */}
+              <button
+                className="lg:hidden block"
+                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              >
+                <FiMenu className="text-2xl" />
+              </button>
 
-            {/* Left Side */}
-            <h2 className="text-[25px] font-bold lg:block hidden">
+              {/* Left Side */}
+              {/* <h2 className="text-[25px] font-bold lg:block hidden">
               Welcome to Admin
-            </h2>
+            </h2> */}
 
-            {/* Right Side */}
-            <div className="flex items-center gap-[20px]">
-              <img src={seting_icon} alt="" />
-              <IoNotificationsOutline className="text-[20px]" />
-              <div className="w-[40px] h-[40px]">
-                <img className="h-full w-full" src={user} alt="user image" />
+              {/* Right Side */}
+              <div className="flex items-center gap-[20px]">
+                <img src={seting_icon} alt="" />
+                <IoNotificationsOutline className="text-[20px]" />
+                <h2>Md: Sadiqur Rahman</h2>
+                <div className="w-[40px] h-[40px]">
+                  <img className="h-full w-full" src={user} alt="user image" />
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         {/* ====> Main Content <==== */}
-        <div className="p-5 overflow-y-auto mt-[20px] lg:mt-[50px]">
+        <div className="p-5 overflow-y-auto mt-[20px] lg:mt-[10px]">
           <Outlet />
         </div>
       </div>
