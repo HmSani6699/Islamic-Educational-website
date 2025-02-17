@@ -9,7 +9,7 @@ import { LuView } from "react-icons/lu";
 
 const AdminDashboard = () => {
   return (
-    <div className="my-[50px]">
+    <div className="lg:my-[50px]">
       <div className="flex gap-[20px]">
         <div className="grid grid-cols-1 lg:grid-cols-3  gap-[20px] w-full mb-[50px]">
           <div className="bg-white p-[20px] rounded-[10px] border-t-[2px] border-[#008000]">

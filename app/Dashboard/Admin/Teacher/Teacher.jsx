@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import TeacherList from "./TeacherList";
 import { FaArrowLeft, FaPlus } from "react-icons/fa";
 import TeacherCreateUpdate from "./TeacherCreateUpdate";
-import TeacherAddClass from "./TeacherAddClass";
 
 const Teacher = () => {
   const [currentPage, setCurrentPage] = useState("teacherList");
@@ -42,6 +41,7 @@ const Teacher = () => {
         <h2 className="text-[25px] font-semibold text-center mb-[40px]">
           ভর্তি ফরম
         </h2>
+
         {/* =====> Progress  <===== */}
         <div className="mb-[20px] mt-[50px]">
           <div className="">

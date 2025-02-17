@@ -44,9 +44,9 @@ const Admin = () => {
         className={`transition-all duration-300 w-full lg:pl-[300px] relative`}
       >
         {/* ====> Top Navbar (Fixed) <==== */}
-        <div className="flex items-end justify-end">
+        <div className="lg:flex left-0 w-full lg:items-end lg:justify-end">
           <div className="  bg-white shadow-md z-40 lg:mx-[20px] lg:mt-[20px] lg:rounded-full rounded-b-[8px] ">
-            <div className=" pl-[20px] pr-[10px] py-[8px] flex items-center justify-between rounded-[20px]">
+            <div className=" pl-[20px] pr-[10px] py-[8px] w-full flex items-center justify-between rounded-[20px]">
               {/* <div className="fixed left-0 lg:left-[300px] right-0 bg-white shadow-md z-40 lg:mx-[20px] lg:mt-[20px] lg:rounded-full rounded-b-[8px] ">
           <div className=" pl-[20px] pr-[10px] py-[8px] flex items-center justify-between rounded-[20px]"> */}
               {/* Sidebar Toggle Button (For Mobile) */}
@@ -76,7 +76,7 @@ const Admin = () => {
         </div>
 
         {/* ====> Main Content <==== */}
-        <div className="p-5 overflow-y-auto mt-[20px] lg:mt-[10px]">
+        <div className="lg:p-[20px] p-[10px] overflow-y-auto mt-[20px] lg:mt-[10px]">
           <Outlet />
         </div>
       </div>
