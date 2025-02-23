@@ -149,7 +149,7 @@
 // export default AdminDashboard;
 
 import React, { useState } from "react";
-import { FaUserCheck } from "react-icons/fa";
+import { FaPlus, FaUserCheck } from "react-icons/fa";
 import dashboard_image from "../../../public/dashboard.png";
 import dashboard_image1 from "../../../public/dashboard1.png";
 import CustomSearchForm from "../../Component/CustomSearchForm/CustomSearchForm";
@@ -196,7 +196,31 @@ const AdminDashboard = () => {
   const total = data1.reduce((acc, item) => acc + item.value, 0);
   const presentPercentage = ((total - 1) / total) * 100;
   return (
-    <div className="lg:my-[15px]">
+    <div className="">
+      {/* =====> Tab Part Start <===== */}
+      <div className="flex items-center justify-between pb-[20px]">
+        <div>
+          <h2 className="text-[20px] font-semibold text-[#202C4B]">
+            Admin Dashboard
+          </h2>
+          <div className="flex items-center gap-[10px]">
+            <p className="text-[#6A7287] text-[14px]">Dashboard</p>
+            <p className="text-[#6a72876c]">/</p>
+            <p className="text-[#6A7287] text-[14px]">Admin Dashboard</p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-[10px]">
+          <button className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
+            <FaPlus className="text-[12px]" /> Add New Student
+          </button>
+          <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[10px] shadow-sm">
+            Fees Details
+          </button>
+        </div>
+      </div>
+      {/* =====> Tab Part End <===== */}
+
       <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[50px]">
         {/* ====> Total Student <==== */}
         <div className="bg-white p-[10px] shadow-md rounded-[10px]">
