@@ -174,6 +174,12 @@ import {
   Pie,
   Cell,
 } from "recharts";
+import TotalEarningChart from "./Finance/TotalEarningChart/TotalEarningChart";
+import TotalExpensesChart from "./Finance/TotalExpensesChart/TotalExpensesChart";
+import MonthlyFeesCollected from "./Finance/MonthlyFeesCollected/MonthlyFeesCollected";
+import FoodFeesCollected from "./Finance/FoodFeesCollected/FoodFeesCollected";
+import DonationCollected from "./Finance/DonationCollected/DonationCollected";
+import FineCollected from "./Finance/FineCollected/FineCollected";
 
 const AdminDashboard = () => {
   const data = [
@@ -365,77 +371,18 @@ const AdminDashboard = () => {
           </div>
         </div>
       </div>
-      {/* ===== */}
-      <div className="w-full overflow-x-auto bg-white py-5 px-4 rounded-[10px] mt-10">
-        {/* =====> Search Div  <====== */}
-        <CustomSearchForm />
 
-        {/* =====> Responsive Table <====== */}
-        <div className="overflow-x-auto">
-          <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px]">
-            <thead>
-              <tr className="bg-[#F1F2F3] font-semibold text-sm md:text-base">
-                <th className="whitespace-nowrap h-10 px-2 text-[#2E3138]">
-                  ID
-                </th>
-                <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
-                  Name
-                </th>
-                <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
-                  Father's Name
-                </th>
-                <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
-                  Address
-                </th>
-                <th className="whitespace-nowrap h-10 px-2 text-[#2E3138]">
-                  Photo
-                </th>
-                <th className="whitespace-nowrap h-10 px-2 text-[#2E3138] text-center">
-                  Action
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {[1, 2, 3].map((id, index) => (
-                <tr key={id} className={index % 2 === 1 ? "bg-[#F1F2F3]" : ""}>
-                  <td className="whitespace-nowrap h-10 px-2 py-2">{id}</td>
-                  <td className="whitespace-nowrap text-center h-10 px-2 py-2">
-                    Md Norol Amin
-                  </td>
-                  <td className="whitespace-nowrap text-center h-10 px-2 py-2">
-                    Md Nivale
-                  </td>
-                  <td className="whitespace-nowrap text-center h-10 px-2 py-2">
-                    Sonarga, Narayongonj
-                  </td>
-                  <td className="h-10 px-2 py-2">
-                    <div className="w-[30px] h-[30px]">
-                      <img
-                        className="w-full h-full object-cover rounded"
-                        src={user}
-                        alt="user"
-                      />
-                    </div>
-                  </td>
-                  <td className="h-10 px-2 py-2 flex justify-center items-center gap-2">
-                    <button>
-                      <img
-                        src={update_green_icon}
-                        alt="Update"
-                        className="w-5 h-5"
-                      />
-                    </button>
-                    <button>
-                      <img src={delete_icon} alt="Delete" className="w-5 h-5" />
-                    </button>
-                    <button className="text-lg">
-                      <LuView />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* =====> Finance <====== */}
+      <div className="flex gap-[20px] mt-[30px]">
+        <div className="lg:w-1/2 flex flex-col gap-[20px]">
+          <TotalEarningChart />
+          <TotalExpensesChart />
+        </div>
+        <div className="lg:w-1/2 flex flex-col gap-[10px]">
+          <MonthlyFeesCollected />
+          <FoodFeesCollected />
+          <DonationCollected />
+          <FineCollected />
         </div>
       </div>
     </div>
