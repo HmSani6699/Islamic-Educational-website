@@ -144,21 +144,57 @@
 
 // export default AdmissionList;
 
-import React from "react";
+import React, { useState } from "react";
 import { LuView } from "react-icons/lu";
 import CustomSearchForm from "../../../Component/CustomSearchForm/CustomSearchForm";
 import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
 import user from "../../../../public/man.png";
+import { FaFilter, FaList, FaSortAlphaDown, FaTh } from "react-icons/fa";
 
 const AdmissionList = () => {
+  const [view, setView] = useState("list");
   return (
-    <div className="w-full overflow-x-auto bg-white py-5 px-4 rounded-[10px] mt-10">
+    <div className="w-full overflow-x-auto bg-white rounded-[10px] mt-10 shadow-sm">
+      <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
+        <h2 className="text-lg font-semibold">Students List</h2>
+
+        <div className="flex items-center gap-2">
+          {/* Filter Dropdown */}
+          <button className="border px-3 py-1 rounded-lg flex items-center gap-2 text-gray-600">
+            <FaFilter /> Filter
+          </button>
+
+          {/* View Toggle */}
+          <button
+            className={`border p-2 rounded-lg ${
+              view === "list" ? "bg-blue-500 text-white" : "text-gray-600"
+            }`}
+            onClick={() => setView("list")}
+          >
+            <FaList />
+          </button>
+          <button
+            className={`border p-2 rounded-lg ${
+              view === "grid" ? "bg-blue-500 text-white" : "text-gray-600"
+            }`}
+            onClick={() => setView("grid")}
+          >
+            <FaTh />
+          </button>
+
+          {/* Sort Dropdown */}
+          <button className="border px-3 py-1 rounded-lg flex items-center gap-2 text-gray-600">
+            <FaSortAlphaDown /> Sort by A-Z
+          </button>
+        </div>
+      </div>
+      <div className="border h-[1px] border-gray-200 w-full my-[10px]"></div>
+
       {/* =====> Search Div  <====== */}
       <CustomSearchForm />
-
       {/* =====> Responsive Table <====== */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto px-[20px]">
         <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px]">
           <thead>
             <tr className="bg-[#F1F2F3] font-semibold text-sm md:text-base">

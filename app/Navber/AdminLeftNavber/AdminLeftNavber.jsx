@@ -13,6 +13,7 @@ import { LuClipboardPenLine } from "react-icons/lu";
 import { IoIosArrowUp } from "react-icons/io";
 import { useLocation } from "react-router";
 import { BiBook } from "react-icons/bi";
+import user_profile from "../../../public/svg/user_profile.svg";
 
 const AdminLeftNavber = () => {
   const [openAcademicMenu, setOpenAcademicMenu] = useState(false);
@@ -20,8 +21,11 @@ const AdminLeftNavber = () => {
 
   return (
     <div className="pl-[20px] pb-[50px]">
-      <NavlLink url={"/admin"} title={"ড্যাশবোর্ড"} children_true={true}>
+      <NavlLink url={"/admin"} title={"Dashboard"} children_true={true}>
         <MdOutlineDashboard className="text-[20px]" />
+      </NavlLink>
+      <NavlLink url={"/admin/profile"} title={"Profile"} children_true={true}>
+        <img src={user_profile} alt="" />
       </NavlLink>
       <NavlLink
         url={"/admin/admission"}

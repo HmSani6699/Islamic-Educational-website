@@ -176,14 +176,14 @@ import {
 
 const AdminDashboard = () => {
   const data = [
-    { name: "2023", value1: 40, value2: 30 },
-    { name: "2023", value1: 50, value2: 40 },
-    { name: "2023", value1: 45, value2: 35 },
-    { name: "2023", value1: 55, value2: 40 },
-    { name: "2023", value1: 35, value2: 30 },
-    { name: "2023", value1: 40, value2: 35 },
-    { name: "2023", value1: 50, value2: 45 },
-    { name: "2023", value1: 60, value2: 50 },
+    { name: "2023", value1: 5, value2: 5 },
+    { name: "2023", value1: 10, value2: 10 },
+    { name: "2023", value1: 15, value2: 20 },
+    { name: "2023", value1: 20, value2: 30 },
+    { name: "2023", value1: 25, value2: 40 },
+    { name: "2023", value1: 30, value2: 50 },
+    { name: "2023", value1: 35, value2: 60 },
+    { name: "2023", value1: 40, value2: 70 },
   ];
 
   const data1 = [
@@ -295,17 +295,28 @@ const AdminDashboard = () => {
       {/* ===== */}
       <div className="flex gap-[20px]">
         <div className="bg-white shadow-md rounded-[8px] lg:w-[60%] lg:p-[20px]">
-          <h2 className="text-[25px] font-bold mb-[40px]">
+          <h2 className="text-[25px] font-bold mb-[20px]">
             Total all years Students
           </h2>
+          <hr className="mb-[20px]" />
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={data}>
               <XAxis dataKey="name" angle={-30} textAnchor="end" />
               {/* <YAxis /> */}
-              <Tooltip />
+              <Tooltip shape={<RoundedBar />} />
               {/* <Legend /> */}
-              <Bar dataKey="value1" stackId="a" fill="#008000" />
-              <Bar dataKey="value2" stackId="a" fill="#E5E8F3" />
+              <Bar
+                dataKey="value1"
+                stackId="a"
+                fill="#008000"
+                // shape={<RoundedBar />}
+              />
+              <Bar
+                dataKey="value2"
+                stackId="a"
+                fill="#E5E8F3"
+                shape={<RoundedBar />}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -441,3 +452,23 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
+const RoundedBar = (props) => {
+  const { x, y, width, height, fill } = props;
+  const radius = 10; // Adjust border radius here
+
+  return (
+    <path
+      d={`
+        M ${x},${y + height} 
+        L ${x},${y + radius} 
+        Q ${x},${y} ${x + radius},${y} 
+        L ${x + width - radius},${y} 
+        Q ${x + width},${y} ${x + width},${y + radius} 
+        L ${x + width},${y + height} 
+        Z
+      `}
+      fill={fill}
+    />
+  );
+};

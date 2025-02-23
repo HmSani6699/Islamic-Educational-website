@@ -7,6 +7,7 @@ import { FiLogOut, FiMenu } from "react-icons/fi";
 import { Outlet } from "react-router";
 import close_icon from "../../../public/svg/close_icon.svg";
 import seting_icon from "../../../public/svg/seting.svg";
+import edu_logo from "../../../public/svg/edulogo.svg";
 
 const Admin = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,12 +26,15 @@ const Admin = () => {
           </button>
         </div>
         {/* ====> Logo div (Fixed) <==== */}
-        <div className="flex items-center justify-center mt-[20px] pb-4 border-b">
+        <div className="flex items-center pl-[30px] gap-[10px] mt-[20px] pb-4 border-b">
           <img
-            className="transition-all duration-300 w-[100px] h-[100px]"
-            src={logo}
+            className="transition-all duration-300 w-[30px] h-[30px]"
+            src={edu_logo}
             alt="website logo"
           />
+          <h2 className=" text-[24px]">
+            <span className="font-bold">Edu</span>Sadiq
+          </h2>
         </div>
 
         {/* ====> Scrollable Navbar <==== */}

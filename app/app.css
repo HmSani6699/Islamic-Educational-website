@@ -26,13 +26,13 @@ body {
 }
 
 .nav_activ_text_colors {
-  color: #008000;
+  color: #3d5ee1;
 }
 .nav_activ_bg_colors {
-  background-color: #3b6b3b3a;
+  background-color: #f2f5ff;
 }
 .nav_activ_left_border_colors {
-  border-left: 2px solid green;
+  border-left: 2px solid #3d5ee1;
 }
 
 /* ====== admin sidescrolling bar  ==== */
