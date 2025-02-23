@@ -24,7 +24,7 @@ const AdminLeftNavber = () => {
   return (
     <div className=" pb-[50px]">
       <MenuDiraction title={"Main"} />
-      <div className="pl-[10px]">
+      <div className="pl-[5px]">
         <NavlLink url={"/admin"} title={"Dashboard"} children_true={true}>
           <MdOutlineDashboard className="text-[18px] text-[#515B73]" />
         </NavlLink>
@@ -33,7 +33,7 @@ const AdminLeftNavber = () => {
         </NavlLink>
       </div>
       <MenuDiraction title={"Student"} />
-      <div className="pl-[10px]">
+      <div className="pl-[5px]">
         <NavlLink
           url={"/admin/admission"}
           title={"Admission"}
@@ -43,7 +43,7 @@ const AdminLeftNavber = () => {
         </NavlLink>
       </div>
       <MenuDiraction title={"Teacher"} />
-      <div className="pl-[10px]">
+      <div className="pl-[5px]">
         <NavlLink
           url={"/admin/teacher"}
           title={"Manage Teacher"}

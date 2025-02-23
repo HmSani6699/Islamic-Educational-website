@@ -39,7 +39,7 @@ const Admin = () => {
           </button>
         </div>
         {/* ====> Logo div (Fixed) <==== */}
-        <div className="flex items-center pl-[30px] gap-[5px] mt-[20px] pb-4 ">
+        <div className="flex items-center pl-[20px] gap-[5px] mt-[20px] pb-4 ">
           <img
             className="transition-all duration-300 w-[40px] h-[40px]"
             src={edu_logo}
