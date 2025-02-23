@@ -38,5 +38,24 @@ body {
 /* ====== admin sidescrolling bar  ==== */
 
 .adminScrollbar::-webkit-scrollbar {
-  width: 0;
+  width: 8px;
+  height: 20px;
+  border-radius: 10px; /* Scrollbar er border radius */
+}
+
+/* Track */
+.adminScrollbar::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px; /* Track er border radius */
+}
+
+/* Handle */
+.adminScrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px; /* Handle er border radius */
+}
+
+/* Handle on hover */
+.adminScrollbar::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
 }
