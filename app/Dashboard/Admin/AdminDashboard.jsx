@@ -156,11 +156,12 @@ import CustomSearchForm from "../../Component/CustomSearchForm/CustomSearchForm"
 import update_green_icon from "../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../public/svg/delete_icon.svg";
 import { LuView } from "react-icons/lu";
-import student from "../../../public/svg/student.svg";
-import teacher from "../../../public/svg/teacher.svg";
+import student from "../../../public/student.png";
+import teacher from "../../../public/teacher.png";
 import staff from "../../../public/svg/staff.svg";
 import subject from "../../../public/svg/subject.svg";
 import user from "../../../public/man.png";
+import banner_tab from "../../../public/banner_tab.png";
 import {
   BarChart,
   Bar,
@@ -221,11 +222,21 @@ const AdminDashboard = () => {
       </div>
       {/* =====> Tab Part End <===== */}
 
-      <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[50px]">
+      <div className="w-full h-[100px] overflow-hidden rounded-[5px] relative mb-[30px]">
+        <img className="w-full " src={banner_tab} alt="" />
+        <div className="absolute top-1/2  left-[20px] -translate-y-1/2">
+          <h2 className="text-[25px] text-white font-bold">
+            Welcome Back, Md. Sadiq
+          </h2>
+          <p className="text-[14px] text-white ">Have a Good day at work</p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-4  gap-[20px] w-full mb-[30px]">
         {/* ====> Total Student <==== */}
         <div className="bg-white p-[10px] shadow-md rounded-[10px]">
           <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+            <div className="h-[50px] w-[50px] bg-[#86ddff28] p-[8px] rounded-[8px]">
               <img src={student} alt="" />
             </div>
             <div>
@@ -233,62 +244,29 @@ const AdminDashboard = () => {
               <p className="text-gray-500 text-[14px]">Total Student</p>
             </div>
           </div>
-          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
-          <div className="flex items-center justify-between  ">
-            <h1 className="text-gray-500 text-[14px]">
-              Active :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
-            </h1>
-            <h1 className="text-gray-500 text-[14px]">
-              Inactive :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
-            </h1>
-          </div>
         </div>
         {/* ====> Total Student <==== */}
         <div className="bg-white p-[10px] shadow-md rounded-[10px]">
           <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+            <div className="h-[50px] w-[50px] bg-[#fde9ed86] p-[8px] rounded-[8px]">
               <img src={teacher} alt="" />
             </div>
             <div>
               <h2 className="text-[25px] font-bold text-[#202C4B]">20</h2>
-              <p className="text-gray-500 text-[14px]">Total Teacher's</p>
+              <p className="text-gray-500 text-[14px]">Total Teacher</p>
             </div>
-          </div>
-          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
-          <div className="flex items-center justify-between  ">
-            <h1 className="text-gray-500 text-[14px]">
-              Active :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
-            </h1>
-            <h1 className="text-gray-500 text-[14px]">
-              Inactive :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
-            </h1>
           </div>
         </div>
         {/* ====> Total Student <==== */}
         <div className="bg-white p-[10px] shadow-md rounded-[10px]">
           <div className="flex items-center gap-[10px]">
-            <div className="h-[50px] w-[50px] bg-[#FDE9ED] p-[8px] rounded-[8px]">
+            <div className="h-[50px] w-[50px] bg-[#FEF8EA] p-[8px] rounded-[8px]">
               <img src={staff} alt="" />
             </div>
             <div>
-              <h2 className="text-[25px] font-bold text-[#202C4B]">120</h2>
-              <p className="text-gray-500 text-[14px]">Total Student</p>
+              <h2 className="text-[25px] font-bold text-[#202C4B]">10</h2>
+              <p className="text-gray-500 text-[14px]">Total Staff</p>
             </div>
-          </div>
-          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
-          <div className="flex items-center justify-between  ">
-            <h1 className="text-gray-500 text-[14px]">
-              Active :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
-            </h1>
-            <h1 className="text-gray-500 text-[14px]">
-              Inactive :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
-            </h1>
           </div>
         </div>
         {/* ====> Total Student <==== */}
@@ -301,17 +279,6 @@ const AdminDashboard = () => {
               <h2 className="text-[25px] font-bold text-[#202C4B]">10</h2>
               <p className="text-gray-500 text-[14px]">Total Student</p>
             </div>
-          </div>
-          <div className="border-[1px] border-gray-200 w-full my-[10px]"></div>
-          <div className="flex items-center justify-between  ">
-            <h1 className="text-gray-500 text-[14px]">
-              Active :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">110</span>
-            </h1>
-            <h1 className="text-gray-500 text-[14px]">
-              Inactive :
-              <span className="font-semibold text-[#202C4B] ml-[3px]">10</span>
-            </h1>
           </div>
         </div>
       </div>
@@ -332,7 +299,7 @@ const AdminDashboard = () => {
               <Bar
                 dataKey="value1"
                 stackId="a"
-                fill="#008000"
+                fill="#3d5ee1"
                 // shape={<RoundedBar />}
               />
               <Bar
