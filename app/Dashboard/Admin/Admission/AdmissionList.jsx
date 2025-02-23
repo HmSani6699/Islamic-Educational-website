@@ -155,28 +155,28 @@ import { FaFilter, FaList, FaSortAlphaDown, FaTh } from "react-icons/fa";
 const AdmissionList = () => {
   const [view, setView] = useState("list");
   return (
-    <div className="w-full overflow-x-auto bg-white rounded-[10px] mt-10 shadow-sm">
+    <div className="w-full overflow-x-auto bg-white rounded-[10px]  shadow-sm">
       <div className="flex items-center justify-between bg-white px-[20px] pt-[20px]">
         <h2 className="text-lg font-semibold">Students List</h2>
 
         <div className="flex items-center gap-2">
           {/* Filter Dropdown */}
-          <button className="border px-3 py-1 rounded-lg flex items-center gap-2 text-gray-600">
-            <FaFilter /> Filter
+          <button className="border px-3 py-1 rounded-[5px] flex items-center gap-2 text-gray-600">
+            <FaFilter className="text-[14px]" /> Filter
           </button>
 
           {/* View Toggle */}
           <button
-            className={`border p-2 rounded-lg ${
-              view === "list" ? "bg-blue-500 text-white" : "text-gray-600"
+            className={`border p-2 rounded-[5px] ${
+              view === "list" ? "bg-[#506EE4] text-white" : "text-gray-600"
             }`}
             onClick={() => setView("list")}
           >
-            <FaList />
+            <FaList className="text-[14px]" />
           </button>
           <button
-            className={`border p-2 rounded-lg ${
-              view === "grid" ? "bg-blue-500 text-white" : "text-gray-600"
+            className={`border p-2 rounded-[5px] ${
+              view === "grid" ? "bg-[#506EE4] text-white" : "text-gray-600"
             }`}
             onClick={() => setView("grid")}
           >
@@ -185,14 +185,24 @@ const AdmissionList = () => {
 
           {/* Sort Dropdown */}
           <button className="border px-3 py-1 rounded-lg flex items-center gap-2 text-gray-600">
-            <FaSortAlphaDown /> Sort by A-Z
+            <FaSortAlphaDown className="text-[14px]" /> Sort by A-Z
           </button>
         </div>
       </div>
       <div className="border h-[1px] border-gray-200 w-full my-[10px]"></div>
-
       {/* =====> Search Div  <====== */}
-      <CustomSearchForm />
+      <div className="flex justify-between items-center px-[20px]">
+        <div className="flex items-center gap-[10px] lg:w-1/2 w-full">
+          <p>Row Per Page</p>
+          <select className="outline-none border py-[8px] px-[10px] rounded-[5px]">
+            <option value="10">10</option>
+          </select>
+          <p>Entries</p>
+        </div>
+        <div className="lg:w-1/2 w-full">
+          <CustomSearchForm classAdd={"w-2/3"} />
+        </div>
+      </div>
       {/* =====> Responsive Table <====== */}
       <div className="overflow-x-auto px-[20px]">
         <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px]">

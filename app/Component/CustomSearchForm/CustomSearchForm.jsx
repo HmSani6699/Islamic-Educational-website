@@ -21,12 +21,12 @@ const CustomSearchForm = ({
           }  flex items-center gap-3`}
         >
           <input
-            className="w-full p-2 text-[16px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#008000] input_filed_gray rounded"
+            className="w-full p-2 text-[16px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray rounded"
             type={type ? type : "text"}
             name="search"
             placeholder={placeholder ? placeholder : "Search here"}
           />
-          <button type="submit" className="py-3 px-3 rounded bg-[#008000] ">
+          <button type="submit" className="py-3 px-3 rounded bg-[#506EE4] ">
             <IoSearchSharp className="text-white" size={15} />
           </button>
         </div>

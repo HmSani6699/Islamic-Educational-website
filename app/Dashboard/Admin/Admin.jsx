@@ -64,7 +64,7 @@ const Admin = () => {
       {/* ====> Right Content <==== */}
       <div className="transition-all duration-300 w-full lg:pl-[270px] relative">
         {/* ====> Top Navbar (Fixed) <==== */}
-        <div className="fixed top-0 left-0  right-0 z-40 w-full bg-white shadow-sm">
+        <div className="fixed top-0 left-0  right-0 lg:pr-[15px] z-40 w-full bg-white shadow-sm">
           <div className="flex items-center justify-between py-[8px] px-[10px] w-full max-w-[1400px] mx-auto">
             {/* Sidebar Toggle Button (Mobile Only) */}
             <button
