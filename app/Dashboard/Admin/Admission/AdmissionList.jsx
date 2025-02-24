@@ -154,6 +154,11 @@ import { FaFilter, FaList, FaSortAlphaDown, FaTh } from "react-icons/fa";
 import grid_icon from "../../../../public/svg/grid.svg";
 import { CgLayoutGridSmall } from "react-icons/cg";
 import { CiGrid41 } from "react-icons/ci";
+import { BiMessageRoundedEdit } from "react-icons/bi";
+import { MdOutlineMail } from "react-icons/md";
+import { IoCallOutline } from "react-icons/io5";
+import { FiPhoneCall } from "react-icons/fi";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const AdmissionList = () => {
   const [view, setView] = useState("list");
@@ -197,8 +202,10 @@ const AdmissionList = () => {
       <div className="flex justify-between items-center px-[20px]">
         <div className="flex items-center gap-[10px] lg:w-1/2 w-full">
           <p className="text-[#515B73] text-[14px]">Row Per Page</p>
-          <select className="outline-none border py-[8px] px-[10px] rounded-[5px]">
+          <select className="outline-none border py-[8px] px-[10px] rounded-[5px] text-[#515B73]">
             <option value="10">10</option>
+            <option value="10">20</option>
+            <option value="10">30</option>
           </select>
           <p className="text-[#515B73] text-[14px]">Entries</p>
         </div>
@@ -207,52 +214,52 @@ const AdmissionList = () => {
         </div>
       </div>
       {/* =====> Responsive Table <====== */}
-      <div className="overflow-auto px-[20px]">
-        <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px]">
+      <div className="overflow-auto table_scrollber">
+        <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px] ">
           <thead>
             <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
-              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap h-10 px-[20px]  text-[#202C4B] text-[14px]">
                 Admission No
               </td>
-              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap h-10 px-2 pl-[20px] text-[#202C4B] text-[14px]">
                 Roll No
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[50px] text-[#202C4B] text-[14px]">
                 Name
               </td>
               <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
                 Photo
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                 Class
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                 Section
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                 Gender
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[20px] text-[#202C4B] text-[14px]">
                 Status
               </td>
-              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+              <td className="whitespace-nowrap text-center h-10 px-[30px] text-[#202C4B] text-[14px]">
                 Date of join
               </td>
 
-              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px] text-center">
+              <td className="whitespace-nowrap h-10 px-[30px] text-[#202C4B] text-[14px] text-center">
                 Action
               </td>
             </tr>
           </thead>
           <tbody>
-            {[1, 2, 3].map((id, index) => (
+            {[1, 2, 3, 0, 0, 0, 0].map((id, index) => (
               <tr
                 key={id}
                 className={
                   index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
                 }
               >
-                <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] h-10 px-2 py-[10px]">
+                <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] pl-[20px] h-10 px-2 py-[13px]">
                   AD12345
                 </td>
                 <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
@@ -271,7 +278,7 @@ const AdmissionList = () => {
                   </div>
                 </td>
 
-                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                <td className="whitespace-nowrap w-[100px] text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                   One
                 </td>
                 <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
@@ -280,27 +287,33 @@ const AdmissionList = () => {
                 <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                   Male
                 </td>
-                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
-                  Active
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[0px]">
+                  <h2 className="bg-green-100 text-green-700 text-[12px] font-semibold border-[2px[ rounded-[5px] py-[2px]">
+                    . Active
+                  </h2>
                 </td>
                 <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                   01 Feb 2025
                 </td>
 
-                <td className="h-10 px-2 py-2 flex justify-center items-center gap-2">
-                  <button>
-                    <img
-                      src={update_green_icon}
-                      alt="Update"
-                      className="w-5 h-5"
-                    />
-                  </button>
-                  <button>
-                    <img src={delete_icon} alt="Delete" className="w-5 h-5" />
-                  </button>
-                  <button className="text-lg">
-                    <LuView />
-                  </button>
+                <td className="h-10 px-2 py-[6px]">
+                  <div className="flex items-center gap-[15px]">
+                    <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <BiMessageRoundedEdit className="text-[20px]" />
+                    </button>
+                    <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <MdOutlineMail className="text-[18px]" />
+                    </button>
+                    <button className="p-[8px] border rounded-full text-[#515B73]">
+                      <FiPhoneCall className="text-[16px]" />
+                    </button>
+                    <button className="p-[8px] border rounded-[5px] whitespace-nowrap bg-[#E9EDF4] font-semibold text-[#515B73] text-[12px] py-[6px] px-[10px]">
+                      Collect Fees
+                    </button>
+                    <button className="pl-[15px] text-[#515B73] ">
+                      <BsThreeDotsVertical />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
