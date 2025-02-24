@@ -151,6 +151,9 @@ import update_green_icon from "../../../../public/svg/updateGreenIcon.svg";
 import delete_icon from "../../../../public/svg/delete_icon.svg";
 import user from "../../../../public/man.png";
 import { FaFilter, FaList, FaSortAlphaDown, FaTh } from "react-icons/fa";
+import grid_icon from "../../../../public/svg/grid.svg";
+import { CgLayoutGridSmall } from "react-icons/cg";
+import { CiGrid41 } from "react-icons/ci";
 
 const AdmissionList = () => {
   const [view, setView] = useState("list");
@@ -180,7 +183,7 @@ const AdmissionList = () => {
             }`}
             onClick={() => setView("grid")}
           >
-            <FaTh />
+            <CiGrid41 />
           </button>
 
           {/* Sort Dropdown */}
@@ -193,54 +196,73 @@ const AdmissionList = () => {
       {/* =====> Search Div  <====== */}
       <div className="flex justify-between items-center px-[20px]">
         <div className="flex items-center gap-[10px] lg:w-1/2 w-full">
-          <p>Row Per Page</p>
+          <p className="text-[#515B73] text-[14px]">Row Per Page</p>
           <select className="outline-none border py-[8px] px-[10px] rounded-[5px]">
             <option value="10">10</option>
           </select>
-          <p>Entries</p>
+          <p className="text-[#515B73] text-[14px]">Entries</p>
         </div>
         <div className="lg:w-1/2 w-full">
           <CustomSearchForm classAdd={"w-2/3"} />
         </div>
       </div>
       {/* =====> Responsive Table <====== */}
-      <div className="overflow-x-auto px-[20px]">
+      <div className="overflow-auto px-[20px]">
         <table className="w-full mt-5 text-left border-collapse table-auto min-w-[600px]">
           <thead>
-            <tr className="bg-[#F1F2F3] font-semibold text-sm md:text-base">
-              <th className="whitespace-nowrap h-10 px-2 text-[#2E3138]">ID</th>
-              <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
+            <tr className="bg-[#f4f7fe] font-semibold text-sm md:text-base">
+              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
+                Admission No
+              </td>
+              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
+                Roll No
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
                 Name
-              </th>
-              <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
-                Father's Name
-              </th>
-              <th className="whitespace-nowrap text-center h-10 px-2 text-[#2E3138]">
-                Address
-              </th>
-              <th className="whitespace-nowrap h-10 px-2 text-[#2E3138]">
+              </td>
+              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px]">
                 Photo
-              </th>
-              <th className="whitespace-nowrap h-10 px-2 text-[#2E3138] text-center">
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+                Class
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+                Section
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+                Gender
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+                Status
+              </td>
+              <td className="whitespace-nowrap text-center h-10 px-2 text-[#202C4B] text-[14px]">
+                Date of join
+              </td>
+
+              <td className="whitespace-nowrap h-10 px-2 text-[#202C4B] text-[14px] text-center">
                 Action
-              </th>
+              </td>
             </tr>
           </thead>
           <tbody>
             {[1, 2, 3].map((id, index) => (
-              <tr key={id} className={index % 2 === 1 ? "bg-[#F1F2F3]" : ""}>
-                <td className="whitespace-nowrap h-10 px-2 py-2">{id}</td>
-                <td className="whitespace-nowrap text-center h-10 px-2 py-2">
-                  Md Norol Amin
+              <tr
+                key={id}
+                className={
+                  index % 2 === 1 ? "bg-[#f4f7fe] border-b" : "border-b"
+                }
+              >
+                <td className="whitespace-nowrap text-[#3D5EE1] text-[14px] h-10 px-2 py-[10px]">
+                  AD12345
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-2 py-2">
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  12
+                </td>
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
                   Md Nivale
                 </td>
-                <td className="whitespace-nowrap text-center h-10 px-2 py-2">
-                  Sonarga, Narayongonj
-                </td>
-                <td className="h-10 px-2 py-2">
-                  <div className="w-[30px] h-[30px]">
+                <td className="h-10 px-2 py-[13px]">
+                  <div className="w-[35px] h-[35px]">
                     <img
                       className="w-full h-full object-cover rounded"
                       src={user}
@@ -248,6 +270,23 @@ const AdmissionList = () => {
                     />
                   </div>
                 </td>
+
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  One
+                </td>
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  A
+                </td>
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  Male
+                </td>
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  Active
+                </td>
+                <td className="whitespace-nowrap text-[#515B73] text-[14px] text-center h-10 px-2 py-[13px]">
+                  01 Feb 2025
+                </td>
+
                 <td className="h-10 px-2 py-2 flex justify-center items-center gap-2">
                   <button>
                     <img
