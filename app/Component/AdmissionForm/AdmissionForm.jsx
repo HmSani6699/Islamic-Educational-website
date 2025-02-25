@@ -74,6 +74,8 @@ import export_icon from "../../../public/svg/export.svg";
 import print from "../../../public/svg/print.svg";
 import ParentsInformation from "./ParentsInformation/ParentsInformation";
 import PersonalInformation from "./PersonalInformation/PersonalInformation";
+import Address from "./Address/Address";
+import PreviousOrganization from "./PreviousOrganization/PreviousOrganization";
 
 const AdmissionForm = () => {
   return (
@@ -96,6 +98,17 @@ const AdmissionForm = () => {
       {/*  */}
       <PersonalInformation />
       <ParentsInformation />
+      <Address />
+      <PreviousOrganization />
+      {/*  */}
+      <div className="flex items-end justify-end gap-[10px] mb-[15px]">
+        <button className="text-[14px] font-semibold text-[#202c4bab] py-[8px] px-[15px] bg-gray-200 rounded-[5px]  border">
+          Cancle
+        </button>
+        <button className="text-[14px] font-semibold text-[#fff] bg-[#506EE4] py-[8px] px-[15px] rounded-[5px]  border">
+          Add Student
+        </button>
+      </div>
     </div>
   );
 };
