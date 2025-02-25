@@ -10,7 +10,7 @@ const TextareaFiled = ({ title, placeholder, setValue }) => {
         rows={6}
         placeholder={placeholder ? placeholder : "Wright the text"}
         onChange={(e) => setValue(e.target.value)}
-        className=" w-full py-2 px-2 text-[16px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#008000] input_filed_gray mt-1.5"
+        className=" w-full py-2 px-2 text-[16px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray mt-1.5"
       />
     </div>
   );
