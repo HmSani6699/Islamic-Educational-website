@@ -21,7 +21,7 @@ const CustomSearchForm = ({
           }  flex items-center gap-3`}
         >
           <input
-            className="w-full p-2 text-[16px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray rounded"
+            className="w-full p-2 text-[14px] font-[400] leading-[22px] border border-[#E3E5E8] outline-[#506EE4] input_filed_gray rounded"
             type={type ? type : "text"}
             name="search"
             placeholder={placeholder ? placeholder : "Search here"}

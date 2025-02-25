@@ -35,7 +35,7 @@ const AdmissionList = () => {
 
           <div className="flex items-center gap-2">
             {/* Filter Dropdown */}
-            <button className="border px-3 py-1 rounded-[5px] flex items-center gap-2 text-gray-600">
+            <button className="border px-3 py-1 rounded-[5px] text-[14px] flex items-center gap-2 text-gray-600">
               <FaFilter className="text-[14px]" /> Filter
             </button>
 
@@ -58,7 +58,7 @@ const AdmissionList = () => {
             </button>
 
             {/* Sort Dropdown */}
-            <button className="border px-3 py-1 rounded-lg flex items-center gap-2 text-gray-600">
+            <button className="border px-3 py-1 rounded-lg flex items-center text-[14px] gap-2 text-gray-600">
               <FaSortAlphaDown className="text-[14px]" /> Sort by A-Z
             </button>
           </div>

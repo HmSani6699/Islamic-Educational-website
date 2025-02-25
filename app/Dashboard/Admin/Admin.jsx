@@ -26,7 +26,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="flex max-w-[1400px] mx-auto bg-[#f4f7fe] min-h-screen relative">
+    <div className="flex max-w-[1400px] mx-auto bg-[#fff] min-h-screen relative">
       {/* ====> Sidebar (Fixed for Large Devices, Toggle for Mobile) <==== */}
       <div
         className={`lg:block ${

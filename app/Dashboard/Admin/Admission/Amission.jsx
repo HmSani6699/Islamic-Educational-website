@@ -44,7 +44,10 @@ const Admission = () => {
           <button className="bg-[#E9EDF4] text-[14px] text-[#515B73] font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
             <img src={export_icon} alt="" /> Export CSV
           </button>
-          <button className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm">
+          <button
+            onClick={() => navigate("/admin/admission_form")}
+            className="bg-[#506EE4] text-[14px] text-white font-semibold flex items-center gap-[8px] rounded-[5px] py-[8px] px-[15px] shadow-sm"
+          >
             <FaPlus className="text-[12px]" /> Add Student
           </button>
         </div>
