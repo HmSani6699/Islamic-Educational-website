@@ -7,31 +7,24 @@ import user from "../../../../public/man.png";
 import { FaFilter, FaList, FaSortAlphaDown, FaTh } from "react-icons/fa";
 import grid_icon from "../../../../public/svg/grid.svg";
 import { CgLayoutGridSmall } from "react-icons/cg";
-import { CiGrid41 } from "react-icons/ci";
+import { CiEdit, CiGrid41 } from "react-icons/ci";
 import { BiMessageRoundedEdit } from "react-icons/bi";
-import { MdOutlineMail } from "react-icons/md";
-import { IoCallOutline } from "react-icons/io5";
+import { MdLockOutline, MdOutlineMail } from "react-icons/md";
+import { IoCallOutline, IoEyeOutline } from "react-icons/io5";
 import { FiPhoneCall } from "react-icons/fi";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import FeesCollect from "../../../Component/FeesCollect/FeesCollect";
+import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
+import { PiToggleRight } from "react-icons/pi";
+import { TbArrowRampRight2 } from "react-icons/tb";
 
 const AdmissionList = () => {
   const [view, setView] = useState("list");
   const [feesCollectOpen, setFeesCollectOpen] = useState(false);
   const [threeDoteId, setThreeDoteId] = useState();
-  const [openThreeDote, setOpenThreeDote] = useState(false);
 
   const handleClickThreeDot = (id) => {
-    setThreeDoteId(id);
-    if (threeDoteId !== id) {
-      setOpenThreeDote(false);
-    }
-
-    if (threeDoteId) {
-      setOpenThreeDote(false);
-    }
-
-    setOpenThreeDote(true);
+    setThreeDoteId((prevId) => (prevId === id ? null : id));
   };
 
   return (
@@ -188,18 +181,37 @@ const AdmissionList = () => {
                       </button>
                       <button
                         onClick={() => handleClickThreeDot(id)}
-                        className="pl-[15px] text-[#515B73] "
+                        className="px-[15px] text-[#515B73] "
                       >
                         <BsThreeDotsVertical />
                       </button>
-                      {/*  */}
-                      {openThreeDote && (
-                        <div className="bg-black absolute top-[35px] right-0 flex flex-col w-[100px] z-[20]">
-                          <button>h</button>
-                          <button>h</button>
-                          <button>h</button>
-                          <button>h</button>
-                          <button>h</button>
+                      {/* Dropdown Menu */}
+                      {threeDoteId === id && (
+                        <div className="bg-white absolute top-[35px] rounded-[5px] shadow-sm border right-0 flex flex-col p-[20px] z-[20]">
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <IoEyeOutline />
+                            View Student
+                          </button>
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <AiOutlineEdit />
+                            Edit
+                          </button>
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <MdLockOutline />
+                            Login Details
+                          </button>
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <PiToggleRight />
+                            Disable
+                          </button>
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <TbArrowRampRight2 />
+                            Promote Student
+                          </button>
+                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                            <AiOutlineDelete />
+                            Delete
+                          </button>
                         </div>
                       )}
                     </div>
