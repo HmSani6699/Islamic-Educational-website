@@ -73,6 +73,7 @@ import { FaPlus } from "react-icons/fa";
 import export_icon from "../../../public/svg/export.svg";
 import print from "../../../public/svg/print.svg";
 import ParentsInformation from "./ParentsInformation/ParentsInformation";
+import PersonalInformation from "./PersonalInformation/PersonalInformation";
 
 const AdmissionForm = () => {
   return (
@@ -93,6 +94,7 @@ const AdmissionForm = () => {
         </div>
       </div>
       {/*  */}
+      <PersonalInformation />
       <ParentsInformation />
     </div>
   );
