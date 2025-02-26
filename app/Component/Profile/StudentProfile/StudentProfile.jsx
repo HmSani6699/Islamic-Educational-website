@@ -1,8 +1,9 @@
 import React from "react";
 import { AiOutlineEdit } from "react-icons/ai";
-import { MdLockOutline } from "react-icons/md";
+import { MdLockOutline, MdOutlineEmail } from "react-icons/md";
 import user from "../../../../public/sadiq.jpg";
 import { GoDotFill } from "react-icons/go";
+import { IoCallOutline } from "react-icons/io5";
 
 const StudentProfile = () => {
   return (
@@ -87,10 +88,60 @@ const StudentProfile = () => {
             </div>
           </div>
           {/* primary info */}
-          <div className="card_shadow w-full">
+          <div className="card_shadow w-full p-[20px] mt-[20px]">
             <h2 className="text-[#202C4B] text-[16px] font-[500]">
               Basic Information
             </h2>
+            <div className="flex items-center gap-[10px] mt-[15px]">
+              <button className="bg-gray-100 p-[8px] rounded-[5px]">
+                <IoCallOutline className="text-[14px]" />
+              </button>
+              <div>
+                <h2 className="text-[#202C4B] text-[14px] font-[500]">
+                  Phone Number
+                </h2>
+                <p className="text-[13px] text-gray-500">01996359111</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-[10px] mt-[15px]">
+              <button className="bg-gray-100 p-[8px] rounded-[5px]">
+                <MdOutlineEmail className="text-[14px]" />
+              </button>
+              <div>
+                <h2 className="text-[#202C4B] text-[14px] font-[500]">
+                  Email Address
+                </h2>
+                <p className="text-[13px] text-gray-500">sadiq@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          {/* sibiling info */}
+          <div className="card_shadow w-full p-[20px] mt-[20px]">
+            <h2 className="text-[#202C4B] text-[16px] font-[500]">
+              Sibiling Information
+            </h2>
+            <div className="flex items-center gap-[10px] mt-[15px] rounded-[5px] p-[10px] bg-[#f2f5ff]">
+              <div className="w-[50px] rounded-[5px]">
+                <img className="rounded-[5px]" src={user} alt="" />
+              </div>
+              <div>
+                <h2 className="text-[#202C4B] text-[14px] font-[500]">
+                  Phone Number
+                </h2>
+                <p className="text-[13px] text-gray-500">OB,AD</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-[10px] mt-[20px] rounded-[5px] p-[10px]  bg-[#f2f5ff]">
+              <div className="w-[50px] rounded-[5px]">
+                <img className="rounded-[5px]" src={user} alt="" />
+              </div>
+              <div>
+                <h2 className="text-[#202C4B] text-[14px] font-[500]">
+                  Email Address
+                </h2>
+                <p className="text-[13px] text-gray-500">GG,TR</p>
+              </div>
+            </div>
           </div>
         </div>
         <div>right</div>
