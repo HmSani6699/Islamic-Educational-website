@@ -1,6 +1,4 @@
 import React from "react";
-import { BsInfoCircle, BsInfoSquare } from "react-icons/bs";
-import { FaCloudUploadAlt } from "react-icons/fa";
 import { FiUploadCloud } from "react-icons/fi";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import InputField from "../../InputField/InputField";
