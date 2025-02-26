@@ -76,6 +76,7 @@ import ParentsInformation from "./ParentsInformation/ParentsInformation";
 import PersonalInformation from "./PersonalInformation/PersonalInformation";
 import Address from "./Address/Address";
 import PreviousOrganization from "./PreviousOrganization/PreviousOrganization";
+import SibilingInformation from "./SibilingInformation/SibilingInformation";
 
 const AdmissionForm = () => {
   return (
@@ -98,6 +99,7 @@ const AdmissionForm = () => {
       {/*  */}
       <PersonalInformation />
       <ParentsInformation />
+      <SibilingInformation />
       <Address />
       <PreviousOrganization />
       {/*  */}
