@@ -14,6 +14,7 @@ export default [
     route("add_category", "./dashboard/admin/AcademicSetup/AddCategoy/AddCategory.jsx"),
     route("add_class", "./dashboard/admin/AcademicSetup/AddClass/AddClassIndex.jsx"),
     route("add_class_group", "./dashboard/admin/AcademicSetup/AddClassGroup/AddClassGroupIndex.jsx"),
+    route("student_profile/:id", "./Component/Profile/StudentProfile/StudentProfile.jsx"),
   ]),
 
     // =====> Teacher routes  <======//

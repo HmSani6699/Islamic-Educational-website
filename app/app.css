@@ -35,6 +35,16 @@ body {
   border-left: 2px solid #3d5ee1;
 }
 
+.card_shadow {
+  background-color: #fff;
+  transition: all 0.5sease-in-out;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #e9edf4;
+  box-shadow: 11px 4.4px 12px -1px rgba(222, 222, 222, 0.3607843137);
+  color: inherit;
+}
+
 /* ====== admin sidescrolling bar  ==== */
 
 .adminScrollbar::-webkit-scrollbar {

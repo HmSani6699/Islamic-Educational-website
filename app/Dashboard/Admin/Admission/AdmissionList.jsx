@@ -17,6 +17,7 @@ import FeesCollect from "../../../Component/FeesCollect/FeesCollect";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 import { PiToggleRight } from "react-icons/pi";
 import { TbArrowRampRight2 } from "react-icons/tb";
+import { NavLink } from "react-router";
 
 const AdmissionList = () => {
   const [view, setView] = useState("list");
@@ -188,10 +189,13 @@ const AdmissionList = () => {
                       {/* Dropdown Menu */}
                       {threeDoteId === id && (
                         <div className="bg-white absolute top-[35px] rounded-[5px] shadow-sm border right-0 flex flex-col p-[20px] z-[20]">
-                          <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
-                            <IoEyeOutline />
-                            View Student
-                          </button>
+                          <NavLink to="/admin/student_profile/10" end>
+                            <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
+                              <IoEyeOutline />
+                              View Student
+                            </button>
+                          </NavLink>
+
                           <button className="flex gap-[10px] text-[#515B73] text-[14px] items-center py-[8px] px-[15px] rounded-[5px] hover:bg-slate-100">
                             <AiOutlineEdit />
                             Edit
