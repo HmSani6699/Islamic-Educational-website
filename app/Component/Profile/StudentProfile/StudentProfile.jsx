@@ -13,6 +13,10 @@ import { LuCalendarDays } from "react-icons/lu";
 import { LiaHandHoldingUsdSolid } from "react-icons/lia";
 import { BsBookmarkStar } from "react-icons/bs";
 import TabButton from "./TabButton/TabButton";
+import ParentsInfo from "./ParentsInfo/ParentsInfo";
+import StudentDocuments from "./StudentDocuments/StudentDocuments";
+import Address from "./Address/Address";
+import PreviousOrganaization from "./PreviousOrganaization/PreviousOrganaization";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -47,7 +51,7 @@ const StudentProfile = () => {
       </div>
       {/* =====> Tab Part End <===== */}
       <div className="lg:flex gap-[20px]">
-        <div className="lg:w-[300px]">
+        <div className="lg:w-1/3">
           {/* basic info */}
           <div className="card_shadow w-full ">
             <div className="flex gap-[10px] items-center p-[20px]">
@@ -154,9 +158,9 @@ const StudentProfile = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        <div className="lg:w-2/3">
           {/* tab */}
-          <div className="flex gap-[20px] overflow-hidden">
+          <div className="flex gap-[20px] overflow-auto feesCollect">
             <TabButton
               title={"Student Details"}
               tabBtn={tabBtn}
@@ -197,6 +201,13 @@ const StudentProfile = () => {
             >
               <BsBookmarkStar />
             </TabButton>
+          </div>
+          {/*  */}
+          <div>
+            <ParentsInfo />
+            <StudentDocuments />
+            <Address />
+            <PreviousOrganaization />
           </div>
         </div>
       </div>
