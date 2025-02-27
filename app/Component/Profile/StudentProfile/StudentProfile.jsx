@@ -12,6 +12,7 @@ import { PiStudent } from "react-icons/pi";
 import { LuCalendarDays } from "react-icons/lu";
 import { LiaHandHoldingUsdSolid } from "react-icons/lia";
 import { BsBookmarkStar } from "react-icons/bs";
+import TabButton from "./TabButton/TabButton";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -156,61 +157,46 @@ const StudentProfile = () => {
         <div className="">
           {/* tab */}
           <div className="flex gap-[20px] overflow-hidden">
-            <button
-              onClick={() => setTabBtn("details")}
-              className={`flex gap-[6px] items-center text-[16px] rounded-b-[5px]  whitespace-nowrap hover:text-[#506EE4] hover:border-b-2 hover:border-b-[#506EE4] ${
-                tabBtn === "details"
-                  ? "border-b-2 border-b-[#506EE4] text-[#506EE4]"
-                  : "text-[#202C4B]"
-              }  p-[6px]`}
+            <TabButton
+              title={"Student Details"}
+              tabBtn={tabBtn}
+              setTabBtn={setTabBtn}
+              tabValue={"details"}
             >
               <PiStudent />
-              Student Details
-            </button>
-            <button
-              onClick={() => setTabBtn("time")}
-              className={`flex gap-[6px] items-center text-[16px] rounded-b-[5px]  whitespace-nowrap hover:text-[#506EE4] hover:border-b-2 hover:border-b-[#506EE4] ${
-                tabBtn === "time"
-                  ? "border-b-2 border-b-[#506EE4] text-[#506EE4]"
-                  : "text-[#202C4B]"
-              }  p-[6px]`}
+            </TabButton>
+            <TabButton
+              title={"Time Table"}
+              tabBtn={tabBtn}
+              setTabBtn={setTabBtn}
+              tabValue={"time"}
             >
               <MdOutlineTableChart />
-              Time Table
-            </button>
-            <button
-              onClick={() => setTabBtn("attendance")}
-              className={`flex gap-[6px] items-center text-[16px] rounded-b-[5px]  whitespace-nowrap hover:text-[#506EE4] hover:border-b-2 hover:border-b-[#506EE4] ${
-                tabBtn === "attendance"
-                  ? "border-b-2 border-b-[#506EE4] text-[#506EE4]"
-                  : "text-[#202C4B]"
-              }  p-[6px]`}
+            </TabButton>
+            <TabButton
+              title={" Attendance"}
+              tabBtn={tabBtn}
+              setTabBtn={setTabBtn}
+              tabValue={"attendance"}
             >
               <LuCalendarDays />
-              Attendance
-            </button>
-            <button
-              onClick={() => setTabBtn("fees")}
-              className={`flex gap-[6px] items-center text-[16px] rounded-b-[5px]  whitespace-nowrap hover:text-[#506EE4] hover:border-b-2 hover:border-b-[#506EE4] ${
-                tabBtn === "fees"
-                  ? "border-b-2 border-b-[#506EE4] text-[#506EE4]"
-                  : "text-[#202C4B]"
-              }  p-[6px]`}
+            </TabButton>
+            <TabButton
+              title={" Fees"}
+              tabBtn={tabBtn}
+              setTabBtn={setTabBtn}
+              tabValue={"fees"}
             >
               <LiaHandHoldingUsdSolid />
-              Fees
-            </button>
-            <button
-              onClick={() => setTabBtn("exam")}
-              className={`flex gap-[6px] items-center text-[16px] rounded-b-[5px]  whitespace-nowrap hover:text-[#506EE4] hover:border-b-2 hover:border-b-[#506EE4] ${
-                tabBtn === "exam"
-                  ? "border-b-2 border-b-[#506EE4] text-[#506EE4]"
-                  : "text-[#202C4B]"
-              }  p-[6px]`}
+            </TabButton>
+            <TabButton
+              title={"  Exam & Results"}
+              tabBtn={tabBtn}
+              setTabBtn={setTabBtn}
+              tabValue={"exam"}
             >
               <BsBookmarkStar />
-              Exam & Results
-            </button>
+            </TabButton>
           </div>
         </div>
       </div>
