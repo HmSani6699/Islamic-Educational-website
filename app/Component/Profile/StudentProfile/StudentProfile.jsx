@@ -17,6 +17,7 @@ import ParentsInfo from "./ParentsInfo/ParentsInfo";
 import StudentDocuments from "./StudentDocuments/StudentDocuments";
 import Address from "./Address/Address";
 import PreviousOrganaization from "./PreviousOrganaization/PreviousOrganaization";
+import ClassRoting from "./ClassRoting/ClassRoting";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -203,12 +204,18 @@ const StudentProfile = () => {
             </TabButton>
           </div>
           {/*  */}
-          <div>
-            <ParentsInfo />
-            <StudentDocuments />
-            <Address />
-            <PreviousOrganaization />
-          </div>
+          {tabBtn === "details" ? (
+            <div>
+              <ParentsInfo />
+              <StudentDocuments />
+              <Address />
+              <PreviousOrganaization />
+            </div>
+          ) : tabBtn === "time" ? (
+            <ClassRoting />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>
