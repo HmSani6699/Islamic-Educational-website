@@ -19,6 +19,7 @@ import Address from "./Address/Address";
 import PreviousOrganaization from "./PreviousOrganaization/PreviousOrganaization";
 import ClassRoting from "./ClassRoting/ClassRoting";
 import AttendanceCalander from "./AttendanceCalander/AttendanceCalander";
+import FeesDetails from "./FeesDetails/FeesDetails";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -188,7 +189,7 @@ const StudentProfile = () => {
               <LuCalendarDays />
             </TabButton>
             <TabButton
-              title={" Fees"}
+              title={"Fees"}
               tabBtn={tabBtn}
               setTabBtn={setTabBtn}
               tabValue={"fees"}
@@ -216,6 +217,8 @@ const StudentProfile = () => {
             <ClassRoting />
           ) : tabBtn === "attendance" ? (
             <AttendanceCalander />
+          ) : tabBtn === "fees" ? (
+            <FeesDetails />
           ) : (
             ""
           )}
