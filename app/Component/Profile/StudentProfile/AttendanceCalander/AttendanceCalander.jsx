@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Calander from "../../../Calander/Calander";
-import { FaCircleArrowLeft } from "react-icons/fa6";
-import { Sector } from "recharts";
 import SelectInputField from "../../../SelectInputField/SelectInputField";
 
 const AttendanceCalander = () => {
@@ -67,8 +65,6 @@ const AttendanceCalander = () => {
       <div className="px-[20px] py-[15px] border-b flex items-center justify-between">
         <h2 className="text-[#202C4B] text-[16px] font-[500] ">Attendance</h2>
         <div className="flex items-center gap-[20px]">
-          {/* <FaCircleArrowLeft />
-          <FaCircleArrowLeft className="rotate-[180deg]" /> */}
           <SelectInputField />
         </div>
       </div>
