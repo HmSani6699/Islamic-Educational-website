@@ -18,6 +18,7 @@ import StudentDocuments from "./StudentDocuments/StudentDocuments";
 import Address from "./Address/Address";
 import PreviousOrganaization from "./PreviousOrganaization/PreviousOrganaization";
 import ClassRoting from "./ClassRoting/ClassRoting";
+import AttendanceCalander from "./AttendanceCalander/AttendanceCalander";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -213,6 +214,8 @@ const StudentProfile = () => {
             </div>
           ) : tabBtn === "time" ? (
             <ClassRoting />
+          ) : tabBtn === "attendance" ? (
+            <AttendanceCalander />
           ) : (
             ""
           )}
