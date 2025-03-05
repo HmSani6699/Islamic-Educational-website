@@ -20,6 +20,7 @@ import PreviousOrganaization from "./PreviousOrganaization/PreviousOrganaization
 import ClassRoting from "./ClassRoting/ClassRoting";
 import AttendanceCalander from "./AttendanceCalander/AttendanceCalander";
 import FeesDetails from "./FeesDetails/FeesDetails";
+import ExamResults from "./Exam&Results/ExamResults";
 
 const StudentProfile = () => {
   const [tabBtn, setTabBtn] = useState("details");
@@ -200,7 +201,7 @@ const StudentProfile = () => {
               title={"  Exam & Results"}
               tabBtn={tabBtn}
               setTabBtn={setTabBtn}
-              tabValue={"exam"}
+              tabValue={"exam_results"}
             >
               <BsBookmarkStar />
             </TabButton>
@@ -219,6 +220,8 @@ const StudentProfile = () => {
             <AttendanceCalander />
           ) : tabBtn === "fees" ? (
             <FeesDetails />
+          ) : tabBtn === "exam_results" ? (
+            <ExamResults />
           ) : (
             ""
           )}
