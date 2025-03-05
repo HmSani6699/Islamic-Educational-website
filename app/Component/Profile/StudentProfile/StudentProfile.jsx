@@ -27,7 +27,7 @@ const StudentProfile = () => {
   return (
     <div>
       {/* =====> Tab Part Start <===== */}
-      <div className="flex items-center justify-between pt-[10px] pb-[20px]">
+      <div className="lg:flex items-center justify-between pt-[10px] pb-[20px]">
         <div>
           <h2 className="text-[20px] font-semibold text-[#202C4B]">
             Student List
